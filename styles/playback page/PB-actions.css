@@ -56,15 +56,20 @@
     cursor: pointer;
     transition: background-color 0.1s;
 }
+.subscribe-button.subscribed
+{
+    background-color: #ddd;
+    color: #0f0f0f;   
+}
 .subscribe-button:hover {
     background-color: #242424;
 }
+.subscribe-button.subscribed:hover
+{
+    background-color: #d1d1d1;
+}
 .subscribe-button:active {
     transform: scale(0.95);
-}
-.subscribe-button:focus {
-    background-color: #ddd;
-    color: #0f0f0f;
 }
 
 /* actions */
