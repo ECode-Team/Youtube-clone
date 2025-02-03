@@ -9,7 +9,7 @@ if (localStorage.getItem('IsSubscribed') === 'true') {
 }
 
 // Change text and add/remove class
-function UpdateSubscribeButton() {
+const UpdateSubscribeButton = () => {
     const canSubscribe = SubscribeButton.textContent === 'subscribe';
     SubscribeButton.classList.toggle('subscribed' , canSubscribe);
     SubscribeButton.textContent = canSubscribe ? 'subscribed' : 'subscribe';
