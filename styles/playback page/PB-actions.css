@@ -106,6 +106,10 @@
     border-radius: 20px 0px 0px 20px; /* Top Left, Top Right, Bottom Right, Bottom Left */
     border-right: 1px solid rgb(205, 205, 205);
 }
+.action.like.liked.icon
+{
+    fill: red;
+}
 .action.dislike
 {
     margin-right: 8px;
