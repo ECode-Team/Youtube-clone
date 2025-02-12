@@ -76,13 +76,13 @@ const Videos = [
         Thumbnail: "imgs/thumbnails/dodge.jpg",
         Title: "Dodge Challenger Hellcat SRT Redeye Widebody | The Ultimate Muscle Car",
         Channel: "HitMakers",
-        Views: "1M veiws &#183; 1 year ago",
+        Views: "1M veiws &#183; 1 year ago"
     },
     {
         Thumbnail: "imgs/thumbnails/hqdefault.avif",
         Title: "RUBIK`S CUBE from LEVEL 1 to LEVEL 100 | Mind Blowing mechanism",
         Channel: "Rubik's &#x2713;",
-        Views: "9.5M views &#183; 10 month ago",
+        Views: "9.5M views &#183; 10 month ago"
     }
 ];
 
@@ -101,7 +101,7 @@ function GenerateVideoCards() {
             <div class="video-card-info">
                 <h4>${video.Title}</h4>
                 <span>${video.Channel}</span>
-                <span>${video.Views} · ${video.time}</span>
+                <span>${video.Views}</span>
             </div>
             <div class="ellipsis"><img src="imgs/Icons/playback page/more-icon.png"></div>
         `;
