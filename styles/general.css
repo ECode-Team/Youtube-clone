@@ -16,10 +16,15 @@ li
 }
 
 body {
-  margin: 0;
   margin: 135px 30px 0px 265px; 
   /* Top, Right, Bottom, Left */
 }
+
+body.closed {
+  margin: 0;
+  margin: 135px 30px 0px 100px; 
+}
+
 hr {
   border-color: rgba(241, 241, 241, 0.281);
   width: auto;
