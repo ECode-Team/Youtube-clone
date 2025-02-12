@@ -3,11 +3,71 @@
   align-items: center;
 }
 
+.theme-toggle {
+  display: none;
+  position: absolute;
+  top: 47px;
+  right: 20px;
+  background-color: white;
+  border-radius: 12px;
+  width: 300px;
+  height: 200px;
+  padding: 5px 0;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+.theme-toggle.opend {
+  display: block;
+}
+.title {
+  display: flex;
+  align-items: center;
+}
+.theme-back-flash{
+  vertical-align: center;
+  /* margin: top right bottom left */
+  margin: 0 5px 0 5px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+.theme-back-flash:hover {
+  background-color: rgb(228, 228, 228);
+}
+.theme-toggle-title {
+  font-family: Roboto, Arial;
+}
+.Appearance-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  font-family: Roboto, Arial;
+  font-size: 14px;
+  color: rgb(19, 19, 19);
+}
+.theme-Mode {
+  display: flex;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.1s;
+}
+.theme-Mode:hover {
+  background-color: rgb(241, 241, 241);
+}
+.theme-tick {
+  vertical-align: center;
+  margin: 0 18px 0 5px;
+}
+.theme-tick.device,
+.theme-tick.dark {
+  opacity: 0;
+}
+
 .profile-icon {
   width: 40px;
   /* padding: 0px 5px; */
   display: flex;
-  cursor: pointer;
   position: relative;
   align-items: center;
   justify-content: center;
@@ -17,6 +77,7 @@
   width: 33px;
   height: 33px;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 /* Dropdown Menu */
@@ -32,8 +93,7 @@
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
   z-index: 1000;
 }
-
-.profile-container:hover .profile-menu {
+.profile-menu.profile-opend {
   display: block;
 }
 
