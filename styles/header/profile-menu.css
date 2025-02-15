@@ -1,3 +1,17 @@
+:root {
+  --text-color: #000000;
+  --main-color: #ffffff;
+  --hover-color: rgb(228, 228, 228);
+  --icon-color: black;
+}
+
+.dark-mode {
+  --text-color: white;
+  --main-color: rgb(42, 42, 42);
+  --hover-color: rgb(60, 60, 60);
+  --icon-color: white;
+}
+
 /* User Profile */
 .profile-container {
   align-items: center;
@@ -8,7 +22,7 @@
   position: absolute;
   top: 47px;
   right: 20px;
-  background-color: white;
+  background-color: var(--main-color);
   border-radius: 12px;
   width: 300px;
   height: 200px;
@@ -22,8 +36,10 @@
 .title {
   display: flex;
   align-items: center;
+  color: var(--text-color);
 }
 .theme-back-flash{
+  fill: var(--icon-color);
   vertical-align: center;
   /* margin: top right bottom left */
   margin: 0 5px 0 5px;
@@ -33,7 +49,7 @@
   transition: background-color 0.2s;
 }
 .theme-back-flash:hover {
-  background-color: rgb(228, 228, 228);
+  background-color: var(--hover-color);
 }
 .theme-toggle-title {
   font-family: Roboto, Arial;
@@ -44,7 +60,7 @@
   gap: 0px;
   font-family: Roboto, Arial;
   font-size: 14px;
-  color: rgb(19, 19, 19);
+  color: var(--text-color);
 }
 .theme-Mode {
   display: flex;
@@ -53,15 +69,23 @@
   transition: background-color 0.1s;
 }
 .theme-Mode:hover {
-  background-color: rgb(241, 241, 241);
+  background-color: var(--hover-color);
 }
 .theme-tick {
   vertical-align: center;
   margin: 0 18px 0 5px;
 }
-.theme-tick.device,
-.theme-tick.dark {
+.theme-tick.device {
+  fill: var(--icon-color);
   opacity: 0;
+}
+.theme-tick.dark {
+  fill: var(--icon-color);
+  opacity: 0;
+}
+.them-tick.light {
+  fill: var(--icon-color);
+  opacity: 1;
 }
 
 .profile-icon {
@@ -86,7 +110,8 @@
   position: absolute;
   top: 47px;
   right: 20px;
-  background-color: white;
+  background-color: var(--main-color);
+  color: var(--text-color);
   border-radius: 12px;
   width: 300px;
   padding: 5px 0;
@@ -130,6 +155,8 @@
 
 /* Menu List */
 .menu-list {
+  background-color: var(--main-color);
+  color: var(--text-color);
   list-style: none;
   margin: 0;
   padding: 0;
@@ -140,7 +167,8 @@
   box-sizing: border-box;
 }
 
-.menu-list img {
+.menu-list svg {
+  fill: var(--icon-color);
   width: 25px;
   margin-right: 18px;
 }
@@ -152,7 +180,6 @@
   padding: 7px 16px;
   font-size: 14px;
   font-weight: 400;
-  color: rgb(22, 22, 22);
   cursor: pointer;
   transition: background-color 0.2s;
 }
@@ -163,10 +190,11 @@
 
 .menu-item-2:hover,
 .menu-item:hover {
-  background-color: #eee;
+  background-color: var(--hover-color);
 }
 
 .right-button {
+  fill: var(--icon-color);
   margin-left: auto; /* Pushes the icon to the far right */
   margin-right: 0 !important;
 }
@@ -175,5 +203,10 @@
   width: 300px;
   margin: 8px 0;
   border: none;
-  border-top: 0.9px solid #ddd;
+  border-top: 0.9px solid var(--hover-color);
+}
+
+.icon-svg {
+  margin-right: 18px;
+  fill: var(--icon-color);
 }

@@ -1,3 +1,8 @@
+:root {
+  --dark-color: #111111;
+  --gray-color: #686868;
+}
+
 p {
   margin-top: 0px;
 }
@@ -15,23 +20,19 @@ p {
   font-family: Roboto, Arial;
 }
 
-body.dark-mode {
-  *,
-  button,
-  body,
-  input {
-    background-color: #0f0f0f !important;
-    color: white !important;
-  }
+html.dark-mode {
+  background-color: var(--dark-color);
+  color: white;
 }
 
 body {
-  margin: 135px 30px 0px 265px; 
+  margin: 135px 30px 0px 265px;
   /* Top, Right, Bottom, Left */
 }
+
 body.closed {
   margin: 0;
-  margin: 135px 30px 0px 100px; 
+  margin: 135px 30px 0px 100px;
 }
 
 hr {

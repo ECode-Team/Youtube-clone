@@ -1,3 +1,19 @@
+:root {
+  --Stext-color: #000000;
+  --Smain-color: #ffffff;
+  --Sbutton-color: rgb(244, 244, 244);
+  --Shover-color: rgb(228, 228, 228);
+  --Sicon-color: black;
+}
+
+.dark-mode {
+  --Stext-color: white;
+  --Smain-color: #0f0f0f;
+  --Sbutton-color: rgb(42, 42, 42);
+  --Shover-color: rgb(60, 60, 60);
+  --Sicon-color: white;
+}
+
 .cover-black{
   position: fixed;
   top: 0;
@@ -28,7 +44,7 @@
   overflow-y: auto;
   scroll-behavior: smooth;
   scrollbar-width: none;
-  background-color: white;
+  background-color: var(--Smain-color);
   transition: left 0.4s ease;
 }
 
@@ -45,7 +61,7 @@
   .you-icon,
   .sidebar-links-home,
   .sidebar-links {
-    background-color: white;
+    background-color: var(--Smain-color);
     padding: 0px 0px;
     height: 70px;
     width: 65px;
@@ -67,12 +83,13 @@
   }
   /* img */
   .sidebar-icon {
+    fill: var(--Sicon-color);
     margin-bottom: 9px;
   }
   .you-icon:hover,
   .sidebar-links:hover,
-  .sidebar-links-home:hover {
-    background-color: rgb(243, 243, 243);
+  .sidebar-links-home:hover { 
+    background-color: var(--Shover-color);
   }
   .for-delete {
     display: none;
@@ -92,7 +109,7 @@
   scrollbar-width: auto;
 }
 .sidebar-container::-webkit-scrollbar-thumb {
-  background: #ccc;
+  background: var(--Shover-color);
   border-radius: 10px;
 }
 
@@ -112,7 +129,7 @@
   display: flex;
   align-items: center;
   cursor: pointer;
-  background-color: rgb(240, 240, 240);
+  background-color: var(--Shover-color);
   border-radius: 10px;
   transition: background-color 0.1s;
 }
@@ -139,11 +156,11 @@
 .sidebar-links-A:hover,
 .sidebar-links:hover,
 .you-icon:hover {
-  background-color: rgb(240, 240, 240);
+  background-color: var(--Shover-color);
 }
 
 .sidebar-links-home:hover {
-  background-color: rgb(233, 233, 233);
+  background-color: var(--Shover-color);
 }
 
 .sidebar-links-A div,

@@ -42,9 +42,22 @@ backFlash.addEventListener('click', () => {
 });
 
 deviceTheme.addEventListener('click', () => {
-    document.body.classList.remove('dark-mode');
+    document.documentElement.classList.remove('dark-mode');
+    darkTick.style.opacity = '0';
+    deviceTick.style.opacity = "1";
+    lightTick.style.opacity = "0";
 });
 
 darkTheme.addEventListener('click', () => {
-    document.body.classList.add('dark-mode');
+    document.documentElement.classList.add('dark-mode'); 
+    darkTick.style.opacity = '1';
+    deviceTick.style.opacity = "0";
+    lightTick.style.opacity = "0";
+});
+
+lightTheme.addEventListener('click', () => {
+    document.documentElement.classList.remove('dark-mode');
+    darkTick.style.opacity = '0';
+    deviceTick.style.opacity = "0";
+    lightTick.style.opacity = "1";
 });
