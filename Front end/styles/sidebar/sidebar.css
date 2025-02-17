@@ -136,7 +136,7 @@
 
 .sidebar-links-home div {
   margin-left: 25px;
-  color: rgb(46, 46, 46);
+  color: var(--Stext-color);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   font-weight: bold;
@@ -178,7 +178,8 @@
   font-weight: 600;
   font-size: 16px;
   display: flex;
-  color: rgb(27, 27, 27);
+  color: var(--Stext-color);
+  fill: var(--Sicon-color);
   cursor: pointer;
   margin: 0;
   border-radius: 10px;
@@ -186,7 +187,7 @@
   align-items: center;
 }
 
-.you-icon img {
+.you-icon svg {
   margin-left: 8px;
 }
 .hr-between {

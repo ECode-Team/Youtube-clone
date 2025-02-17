@@ -1,9 +1,25 @@
+:root {
+  --SBtext-color: #000000;
+  --SBmain-color: #ffffff;
+  --SBbutton-color: rgb(244, 244, 244);
+  --SBhover-color: rgb(228, 228, 228);
+  --SBicon-color: black;
+}
+
+.dark-mode {
+  --SBtext-color: white;
+  --SBmain-color: #0f0f0f;
+  --SBbutton-color: rgb(42, 42, 42);
+  --SBhover-color: rgb(60, 60, 60);
+  --SBicon-color: white;
+}
+
 .subscription-icon {
   font-family: "Roboto", "Arial", sans-serif;
   font-weight: 500;
   font-size: 16px;
   display: flex;
-  color: rgb(0, 0, 0);
+  color: var(--SBtext-color);
   padding: 6px 12px 4px;
   margin: 0;
 }
@@ -41,7 +57,7 @@
 }
 
 .subscription-item:hover {
-  background-color: rgb(243, 243, 243);
+  background-color: var(--SBhover-color);
 }
 
 .live-icon-r {
@@ -71,5 +87,5 @@
   margin-right: 25px;
 }
 .Show-more-icon:hover {
-  background-color: rgb(243, 243, 243);
+  background-color: var(--SBhover-color);
 }
