@@ -79,8 +79,11 @@ WSGI_APPLICATION = 'YOUTUBE.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': BASE_DIR / 'ecopy369$default',
+        'HOST': 'ecopy369.mysql.pythonanywhere-services.com',
+        'USER': 'ecopy369',
+        'PASSWORD': '@yasin112.com' 
     }
 }
 
