@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-h&ez)-#!ngb-yxv&j^2*(sb7*m%$i^=3%z&hqi6tn*8-mtfe70
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ecopy369.pythonanywhere.com']
 
 
 # Application definition
@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'YOUTUBE.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': BASE_DIR / 'ecopy369$default',
+        'NAME': 'ecopy369$default',
         'HOST': 'ecopy369.mysql.pythonanywhere-services.com',
         'USER': 'ecopy369',
         'PASSWORD': '@yasin112.com' 
@@ -128,7 +128,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # مشخص کردن فولدری که فایل‌های استاتیک در آن جمع‌آوری می‌شوند
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = '/home/ecopy369/Youtube/staticfiles'
 
 # مسیرهای اضافی که Django از آن‌ها فایل استاتیک می‌خواند
 STATICFILES_DIRS = [
