@@ -1,3 +1,22 @@
+:root {
+    --atptext-color: rgb(59, 59, 59);
+    --atpmain-color: #ffffff;
+    --atpbutton-color: rgb(228, 228, 228);
+    --atphover-color: rgb(30, 30, 30);
+    --Subhover-color: rgb(194, 194, 194);
+    --atpicon-color: black;
+  }
+  
+  .dark-mode {
+    --atptext-color: rgb(197, 197, 197);
+    --atpmain-color: #0f0f0f;
+    --atpbutton-color: rgb(42, 42, 42);
+    --atphover-color: rgb(207, 207, 207);
+    --Subhover-color: rgb(60, 60, 60);
+    --atpicon-color: white;
+  }
+  
+
 /* channel name and actions */
 .mid-row {
     display: flex;
@@ -35,7 +54,7 @@
 
 .subscribers {
     font-size: 0.8rem;
-    color: #666666;
+    color: var(--atptext-color);
 }
 
 .subscribe-button {
@@ -47,8 +66,8 @@
     line-height: 1.1;
     padding: 10px;
     margin-left: 35px;
-    background-color: #0f0f0f;
-    color: white;
+    background-color: var(--atpicon-color);
+    color: var(--atpmain-color);
     border: none;
     border-radius: 20px;
     font-size: 0.9rem;
@@ -58,15 +77,15 @@
 }
 .subscribe-button.subscribed
 {
-    background-color: #ddd;
-    color: #0f0f0f;   
+    background-color: var(--atpbutton-color);
+    color: var(--atpicon-color);
 }
 .subscribe-button:hover {
-    background-color: #242424;
+    background-color: var(--atphover-color);
 }
 .subscribe-button.subscribed:hover
 {
-    background-color: #d1d1d1;
+    background-color: var(--Subhover-color);
 }
 .subscribe-button:active {
     transform: scale(0.95);
@@ -84,7 +103,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f1f1f1;
+    background-color: var(--atpbutton-color);
+    color: var(--atpicon-color);
     border: none;   
     width: auto;
     height: 35px;
@@ -97,7 +117,7 @@
 }
 
 .action:hover {
-    background-color: #dfdfdf;
+    background-color: var(--Subhover-color);
 }
 
 /* like and dislike */
@@ -108,7 +128,7 @@
 }
 .action.like.liked.icon
 {
-    fill: red;
+    fill: var(--atpicon-color);
 }
 .action.dislike
 {

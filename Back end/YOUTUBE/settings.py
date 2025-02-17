@@ -1,3 +1,5 @@
+import os
+
 """
 Django settings for YOUTUBE project.
 
@@ -117,7 +119,19 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = 'static/'
+
+
+# مسیر فولدر static برای دسترسی به فایل‌های استاتیک
+STATIC_URL = '/static/'
+
+# مشخص کردن فولدری که فایل‌های استاتیک در آن جمع‌آوری می‌شوند
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# مسیرهای اضافی که Django از آن‌ها فایل استاتیک می‌خواند
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

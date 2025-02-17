@@ -1,3 +1,20 @@
+:root {
+    --rtptext-color: rgb(59, 59, 59);
+    --rtpmain-color: #ffffff;
+    --rtpbutton-color: rgb(244, 244, 244);
+    --rtphover-color: rgb(228, 228, 228);
+    --rtpicon-color: black;
+  }
+  
+  .dark-mode {
+    --rtptext-color: rgb(197, 197, 197);
+    --rtpmain-color: #0f0f0f;
+    --rtpbutton-color: rgb(42, 42, 42);
+    --rtphover-color: rgb(60, 60, 60);
+    --rtpicon-color: white;
+  }
+  
+
 /* Recommended Section */
 .risponsived-recommended-section,
 .recommended-section {
@@ -45,7 +62,7 @@
 .video-card span {
     font-size: 12px;
     font-weight: 400;
-    color: rgb(59, 59, 59);
+    color: var(--rtptext-color);
 }
 
 .ellipsis
@@ -63,6 +80,7 @@
 
 .ellipsis img
 {
+    fill: var(--rtpicon-color);
     margin-right: 0;
     height: 14px;
     width: 12px;
@@ -70,7 +88,7 @@
 
 .ellipsis:hover
 {
-    background-color: #e0e0e0;
+    background-color: var(--rtphover-color);
 }
 
 /* Risponsives */

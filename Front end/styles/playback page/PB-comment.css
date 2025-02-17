@@ -1,10 +1,28 @@
+:root {
+    --Crtptext-color: rgb(0, 0, 0);
+    --Crtpmain-color: #ffffff;
+    --Crtpbutton-color: rgb(244, 244, 244);
+    --Crtphover-color: rgb(228, 228, 228);
+    --Crtpicon-color: black;
+  }
+  
+  .dark-mode {
+    --Crtptext-color: rgb(255, 255, 255);
+    --Crtpmain-color: #0f0f0f;
+    --Crtpbutton-color: rgb(42, 42, 42);
+    --Crtphover-color: rgb(60, 60, 60);
+    --Crtpicon-color: white;
+  }
+  
+
 .comment-section {
     display: flex;
     flex-direction: column;
     gap: 10px;
     width: auto;
     margin: 0 auto;
-    background: #fff;
+    background: var(--Crtpmain-color);
+    color: var(--Crtptext-color);
     border-radius: 8px;
 }
 
@@ -30,7 +48,7 @@
 
 .username {
     font-weight: bold;
-    color: rgb(26, 26, 26);
+    color: var(--Crtptext-color);
     margin-bottom: 5px;
     font-size: 0.8rem;
 }
@@ -38,7 +56,7 @@
 .comment-text {
     margin-bottom: 10px;
     font-size: 0.9rem;
-    color: rgb(29, 29, 29);
+    color: var(--Crtptext-color);
 }
 
 .comment-action {
@@ -57,12 +75,13 @@
     font-size: 0.7rem;
     font-weight: bold;
     border: none;
-    background-color: white;
+    background-color: var(--Crtpmain-color);
     cursor: pointer;
 }
 
 .button-reply
 {   
+    color: var(--Crtptext-color);
     padding: 9px 12px;
     border-radius: 15px;
 }
@@ -76,11 +95,11 @@
 .comment-icon:hover,
 .button-reply:hover
 {
-    background-color: #ddd;
+    background-color: var(--Crtphover-color);
 }
 
 .comment-likes
 {
     font-size: 0.8rem;
-    color: gray;
+    color: var(--Crtptext-color);
 }
