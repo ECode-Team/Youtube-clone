@@ -117,6 +117,24 @@
   width: 8px;
 }
 
+.YT-side {
+  display: flex;
+  padding-left: 16px;
+  align-items: center;
+}
+
+.menu-btn-side {
+  width: 30px;
+}
+
+.menu-btn-side img {
+  padding: 8px;
+}
+
+.youtube-logo{
+  margin: 18px 14px 19px 28px;
+}
+
 .section-section {
   padding: 12px 14px;
   width: 216px;
