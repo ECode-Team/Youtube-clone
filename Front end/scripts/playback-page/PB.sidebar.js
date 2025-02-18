@@ -10,4 +10,4 @@ menuBtn.addEventListener("click", () => {
 coverblack.addEventListener('click', () => {
     coverblack.classList.remove("active")
     sidebar.classList.add("close")
-})
+});
