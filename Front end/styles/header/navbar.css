@@ -131,7 +131,7 @@
   cursor: pointer;
   transition: background-color 0.1s;
   background-color: var(--Nbutton-color);
-  color: var(--Nicon-color);  
+  color: var(--Nicon-color);
 }
 
 .mic-icon button:hover {

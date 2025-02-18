@@ -5,17 +5,17 @@
     --atphover-color: rgb(30, 30, 30);
     --Subhover-color: rgb(194, 194, 194);
     --atpicon-color: black;
-  }
-  
-  .dark-mode {
+}
+
+.dark-mode {
     --atptext-color: rgb(197, 197, 197);
     --atpmain-color: #0f0f0f;
     --atpbutton-color: rgb(42, 42, 42);
     --atphover-color: rgb(207, 207, 207);
     --Subhover-color: rgb(60, 60, 60);
     --atpicon-color: white;
-  }
-  
+}
+
 
 /* channel name and actions */
 .mid-row {
@@ -75,18 +75,20 @@
     cursor: pointer;
     transition: background-color 0.1s;
 }
-.subscribe-button.subscribed
-{
+
+.subscribe-button.subscribed {
     background-color: var(--atpbutton-color);
     color: var(--atpicon-color);
 }
+
 .subscribe-button:hover {
     background-color: var(--atphover-color);
 }
-.subscribe-button.subscribed:hover
-{
+
+.subscribe-button.subscribed:hover {
     background-color: var(--Subhover-color);
 }
+
 .subscribe-button:active {
     transform: scale(0.95);
 }
@@ -105,7 +107,8 @@
     justify-content: center;
     background-color: var(--atpbutton-color);
     color: var(--atpicon-color);
-    border: none;   
+    fill: var(--atpicon-color);
+    border: none;
     width: auto;
     height: 35px;
     padding: 8px 12px;
@@ -121,64 +124,66 @@
 }
 
 /* like and dislike */
-.action.like
-{
-    border-radius: 20px 0px 0px 20px; /* Top Left, Top Right, Bottom Right, Bottom Left */
+.action.like {
+    border-radius: 20px 0px 0px 20px;
+    /* Top Left, Top Right, Bottom Right, Bottom Left */
     border-right: 1px solid rgb(205, 205, 205);
 }
-.action.like.liked.icon
-{
-    fill: var(--atpicon-color);
+
+.action.like.liked {
+    
 }
-.action.dislike
-{
+
+.action.dislike {
     margin-right: 8px;
-    border-radius: 0px 20px 20px 0px; /* Top Left, Top Right, Bottom Right, Bottom Left */
+    border-radius: 0px 20px 20px 0px;
+    /* Top Left, Top Right, Bottom Right, Bottom Left */
 }
-.action.more .icon
-{
+.icon.disliked {
+    display: none;
+}
+
+.action.more .icon {
     margin-right: 0;
     padding: 0;
     line-height: 0;
 }
+
 .icon {
     font-size: 16px;
     margin-right: 6px;
 }
+
 .text {
-    margin-top: 8px;
     font-size: 14px;
     font-weight: 500;
 }
 
-@media (max-width: 1368px)
-{
-    .action.save
-    {
+@media (max-width: 1368px) {
+    .action.save {
         display: none;
     }
 }
-@media (max-width: 1268px)
-{
-    .action.clip
-    {
+
+@media (max-width: 1268px) {
+    .action.clip {
         display: none;
     }
 }
-@media (max-width: 1180px)
-{
-    .action.download
-    {
+
+@media (max-width: 1180px) {
+    .action.download {
         display: none;
     }
 }
-@media (max-width: 1050px)
-{
-    .action.share
-    {
+
+@media (max-width: 1050px) {
+    .action.share {
         display: none;
     }
+
     .subscribe-button {
-        margin: 0 0 0 10px; /* top right bottom left */
+        margin: 0 0 0 10px;
+        /* top right bottom left */
     }
 }
