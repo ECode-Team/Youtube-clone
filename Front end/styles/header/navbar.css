@@ -184,7 +184,7 @@
   margin-right: 14px;
   border-radius: 50%;
   border: none;
-  background-color: var(--Nbutton-color);
+  background-color: var(--Nmain-color); 
   fill: var(--Nicon-color);
   cursor: pointer;
 }

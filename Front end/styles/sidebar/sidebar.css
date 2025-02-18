@@ -125,13 +125,14 @@
 
 .menu-btn-side {
   width: 30px;
+  border: none;
 }
 
 .menu-btn-side img {
   padding: 8px;
 }
 
-.youtube-logo{
+.youtube-logo-sid{
   margin: 18px 14px 19px 28px;
 }
 
@@ -207,6 +208,7 @@
 
 .you-icon svg {
   margin-left: 8px;
+  width: 15px !important;
 }
 .hr-between {
   margin: 10px 0px;
