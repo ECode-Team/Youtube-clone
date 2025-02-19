@@ -3,7 +3,7 @@
     --rtpmain-color: #ffffff;
     --rtpbutton-color: rgb(244, 244, 244);
     --rtphover-color: rgb(228, 228, 228);
-    --rtpicon-color: black;
+    --rtpicon-color: 0;
   }
   
   .dark-mode {
@@ -11,7 +11,7 @@
     --rtpmain-color: #0f0f0f;
     --rtpbutton-color: rgb(42, 42, 42);
     --rtphover-color: rgb(60, 60, 60);
-    --rtpicon-color: white;
+    --rtpicon-color: 1;
   }
   
 
@@ -80,7 +80,7 @@
 
 .ellipsis img
 {
-    fill: var(--rtpicon-color);
+    filter: invert(var(--rtpicon-color));
     margin-right: 0;
     height: 14px;
     width: 12px;
