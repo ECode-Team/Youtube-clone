@@ -2,14 +2,14 @@
   --text-color: #000000;
   --main-color: #ffffff;
   --hover-color: rgb(228, 228, 228);
-  --icon-color: black;
+  --icon-color: 0;
 }
 
 .dark-mode {
   --text-color: white;
   --main-color: rgb(42, 42, 42);
   --hover-color: rgb(60, 60, 60);
-  --icon-color: white;
+  --icon-color: 1;
 }
 
 /* User Profile */
@@ -39,7 +39,7 @@
   color: var(--text-color);
 }
 .theme-back-flash{
-  fill: var(--icon-color);
+  filter: invert(var(--icon-color));
   vertical-align: center;
   /* margin: top right bottom left */
   margin: 0 5px 0 5px;
@@ -76,15 +76,15 @@
   margin: 0 18px 0 5px;
 }
 .theme-tick.device {
-  fill: var(--icon-color);
+  filter: invert(var(--icon-color));
   opacity: 0;
 }
 .theme-tick.dark {
-  fill: var(--icon-color);
+  filter: invert(var(--icon-color));
   opacity: 0;
 }
 .them-tick.light {
-  fill: var(--icon-color);
+  filter: invert(var(--icon-color));
   opacity: 1;
 }
 
@@ -167,8 +167,8 @@
   box-sizing: border-box;
 }
 
-.menu-list svg {
-  fill: var(--icon-color);
+.menu-list img {
+  filter: invert(var(--icon-color));
   width: 25px;
   margin-right: 18px;
 }
@@ -194,7 +194,7 @@
 }
 
 .right-button {
-  fill: var(--icon-color);
+  filter: invert(var(--icon-color));
   margin-left: auto; /* Pushes the icon to the far right */
   margin-right: 0 !important;
 }
@@ -208,5 +208,5 @@
 
 .icon-svg {
   margin-right: 18px;
-  fill: var(--icon-color);
+  filter: invert(var(--icon-color));
 }

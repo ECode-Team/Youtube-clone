@@ -3,7 +3,7 @@
   --Nmain-color: #ffffff;
   --Nbutton-color: rgb(244, 244, 244);
   --Nhover-color: rgb(228, 228, 228);
-  --Nicon-color: black;
+  --Nicon-color: 0;
 }
 
 .dark-mode {
@@ -11,7 +11,12 @@
   --Nmain-color: #0f0f0f;
   --Nbutton-color: rgb(42, 42, 42);
   --Nhover-color: rgb(60, 60, 60);
-  --Nicon-color: white;
+  --Nicon-color: 1;
+}
+
+.bell,
+.nav-icon {
+  filter: invert(var(--Nicon-color));
 }
 
 .navbar {
@@ -42,22 +47,16 @@
   cursor: pointer;
   border: none;
   background-color: var(--Nmain-color);
-  fill: var(--Nicon-color);
 }
 
 .menu-btn:hover {
   background-color: var(--Nhover-color);
 }
 
-.menu-icon {
-  display: flex;
-}
-
 .youtube-logo {
   height: 20px !important;
   margin-left: 18px;
   cursor: pointer;
-  fill: var(--Nicon-color);
 }
 
 /* middle section */
@@ -110,11 +109,6 @@
   transition: background-color 0.1s;
 }
 
-.serch-icon svg {
-  fill: var(--Nicon-color);
-  background-color: var();
-}
-
 .serch-icon:hover {
   background-color: var(--Nhover-color);
 }
@@ -131,7 +125,7 @@
   cursor: pointer;
   transition: background-color 0.1s;
   background-color: var(--Nbutton-color);
-  color: var(--Nicon-color);
+  color: var(--Ntext-color);
 }
 
 .mic-icon button:hover {
@@ -163,9 +157,9 @@
   transition: background-color 0.1s;
 }
 
-.plus-btn svg {
+.plus-btn img {
   margin-right: 6px;
-  fill: var(--Nicon-color);
+  filter: invert((--Nicon-color));
 }
 
 .plus-btn:hover {
@@ -185,7 +179,7 @@
   border-radius: 50%;
   border: none;
   background-color: var(--Nbutton-color);
-  fill: var(--Nicon-color);
+  filter: invert((--Nicon-color));
   cursor: pointer;
 }
 

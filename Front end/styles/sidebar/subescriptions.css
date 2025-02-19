@@ -3,7 +3,7 @@
   --SBmain-color: #ffffff;
   --SBbutton-color: rgb(244, 244, 244);
   --SBhover-color: rgb(228, 228, 228);
-  --SBicon-color: black;
+  --SBicon-color: 0;
 }
 
 .dark-mode {
@@ -11,7 +11,7 @@
   --SBmain-color: #0f0f0f;
   --SBbutton-color: rgb(42, 42, 42);
   --SBhover-color: rgb(60, 60, 60);
-  --SBicon-color: white;
+  --SBicon-color: 1;
 }
 
 .subscription-icon {
@@ -84,6 +84,7 @@
   border-radius: 10px;
 }
 .Show-more-icon img {
+  filter: invert(var(--SBicon-color));
   margin-right: 25px;
 }
 .Show-more-icon:hover {
