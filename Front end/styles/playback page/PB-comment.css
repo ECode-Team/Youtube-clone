@@ -3,7 +3,7 @@
     --Crtpmain-color: #ffffff;
     --Crtpbutton-color: rgb(244, 244, 244);
     --Crtphover-color: rgb(228, 228, 228);
-    --Crtpicon-color: black;
+    --Crtpicon-color: 0;
   }
   
   .dark-mode {
@@ -11,7 +11,7 @@
     --Crtpmain-color: #0f0f0f;
     --Crtpbutton-color: rgb(42, 42, 42);
     --Crtphover-color: rgb(60, 60, 60);
-    --Crtpicon-color: white;
+    --Crtpicon-color: 1;
   }
   
 
@@ -88,6 +88,7 @@
 
 .comment-icon
 {
+    filter: invert(var(--Crtpicon-color));
     padding: 3px;
     border-radius: 50%;
 }

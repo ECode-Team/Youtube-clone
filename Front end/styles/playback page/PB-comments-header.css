@@ -3,7 +3,7 @@
   --Cpmain-color: #ffffff;
   --Cpbutton-color: rgb(224, 224, 224);
   --Cphover-color: rgb(228, 228, 228);
-  --Cpicon-color: black;
+  --Cpicon-color: 0;
 }
 
 .dark-mode {
@@ -11,7 +11,7 @@
   --Cpmain-color: #0f0f0f;
   --Cpbutton-color: rgb(42, 42, 42);
   --Cphover-color: rgb(60, 60, 60);
-  --Cpicon-color: white;
+  --Cpicon-color: 1;
 }
 
 .comments-header-section {
@@ -40,7 +40,9 @@
   font-size: 0.85rem;
   font-weight: 500;
 }
-
+.sort-icon {
+  filter: invert(var(--Cpicon-color));
+}
 /* Add Comment Section */
 .add-comment {
   display: flex;
