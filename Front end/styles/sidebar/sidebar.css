@@ -141,13 +141,23 @@
 
 .menu-btn-side {
   width: 30px;
+  border: none;
+  background-color: var(--Smain-color);
+  border-radius: 50%;
+  /* padding: 8px 8px; */
+  cursor: pointer;
+  fill: var(--Sicon-color);
+}
+
+.menu-btn-side:hover{
+  background-color: var(--Shover-color);
 }
 
 .menu-btn-side img {
   padding: 8px;
 }
 
-.youtube-logo{
+.youtube-logo-sid{
   margin: 18px 14px 19px 28px;
 }
 
@@ -224,6 +234,7 @@
 .you-icon img {
   margin-left: 8px;
   filter: invert(var(--Sicon-color));
+  width: 15px !important;
 }
 
 .hr-between {
