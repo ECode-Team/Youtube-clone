@@ -45,6 +45,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'video',
     'rest_framework',
+    'api_video',
+    'corsheaders',
+    'drf_yasg',
+    'account',
 ]
 
 MIDDLEWARE = [
@@ -144,3 +148,5 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTH_USER_MODEL = 'account.Account'
