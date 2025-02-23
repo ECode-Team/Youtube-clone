@@ -25,37 +25,36 @@ class ListCat(ListAPIView):
    serializer_class = CategorySerializer
 
 
+# class VideoObjView(APIView):
+#   permission_classes = (IsAuthenticated,)
+#   def get(self,request):
+#       videos = VIDEO.objects.all()
+#       Serializer = VideoSerializer(instance=videos,many=True)
+#       return Response(Serializer.data)
 
-class VideoObjView(APIView):
-  permission_classes = (IsAuthenticated,)
-  def get(self,request):
-      videos = VIDEO.objects.all()
-      Serializer = VideoSerializer(instance=videos,many=True)
-      return Response(Serializer.data)
-
-  def post(self,request):
-     data=request.data
-     serializer = CreateVideoSerializer(data=data)
-     serializer.is_valid(raise_exception=True)
-     serializer.save()
-     return Response(serializer.data, status=status.HTTP_201_CREATED)
+#   def post(self,request):
+#      data=request.data
+#      serializer = CreateVideoSerializer(data=data)
+#      serializer.is_valid(raise_exception=True)
+#      serializer.save()
+#      return Response(serializer.data, status=status.HTTP_201_CREATED)
 
  
 
-  def put(self,request,id):
-     video_obj = VIDEO.objects.get(id=id)
-     serializer = CreateVideoSerializer(instance=video_obj,data=request.data)
-     serializer.is_valid(raise_exception=True)
-     serializer.save()
-     return Response(serializer.data, status=status.HTTP_200_OK)
+#   def put(self,request,id):
+#      video_obj = VIDEO.objects.get(id=id)
+#      serializer = CreateVideoSerializer(instance=video_obj,data=request.data)
+#      serializer.is_valid(raise_exception=True)
+#      serializer.save()
+#      return Response(serializer.data, status=status.HTTP_200_OK)
      
      
 
-  def delete(self,request,id):
-    video_obj = VIDEO.objects.get(id=id)
-    video_obj.delete()
+#   def delete(self,request,id):
+#     video_obj = VIDEO.objects.get(id=id)
+#     video_obj.delete()
 
-    return Response(status=status.HTTP_204_NO_CONTENT) 
+#     return Response(status=status.HTTP_204_NO_CONTENT) 
 
 # @api_view(['GET', 'POST'])
 # def home_video(request):
@@ -71,22 +70,26 @@ class VideoObjView(APIView):
 #         return Response(Serializer.data, status=status.HTTP_201_CREATED)
 
 
-# @api_view(['PUT', 'DELETE'])
-# def update_video(request, id):
-#     if request.method == "PUT":
-#         video_obj = VIDEO.objects.get(id=id)
+@api_view(['PUT', 'DELETE','get'])
+def update_video(request, id):
+    if request.method == "GET":
+        data = VIDEO.objects.get(id=id)
+        Video_Serializer = VideoSerializer(data)
+        return Response(Video_Serializer.data)
+    if request.method == "PUT":
+        video_obj = VIDEO.objects.get(id=id)
 
-#         Serializer = VideoSerializer(
-#             isinstance=video_obj,
-#             data=request.data,
-#         )
-#         Serializer.is_valid(raise_exception=True)
+        Serializer = VideoSerializer(
+            isinstance=video_obj,
+            data=request.data,
+        )
+        Serializer.is_valid(raise_exception=True)
 
-#         Serializer.save()
+        Serializer.save()
 
-#         return Response(Serializer.data, status=status.HTTP_200_OK)
-#     if request.method == "DELETE":
-#         video_obj = VIDEO.objects.get(id=id)
-#         video_obj.delete()
+        return Response(Serializer.data, status=status.HTTP_200_OK)
+    if request.method == "DELETE":
+        video_obj = VIDEO.objects.get(id=id)
+        video_obj.delete()
 
-#         return Response(status=status.HTTP_204_NO_CONTENT)
+        return Response(status=status.HTTP_204_NO_CONTENT)
