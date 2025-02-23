@@ -45,9 +45,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'video',
     'rest_framework',
-    'api_video',
-    'corsheaders',
-    'drf_yasg',
     'account',
 ]
 
@@ -88,10 +85,10 @@ WSGI_APPLICATION = 'YOUTUBE.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ecopy369$default',
+        'NAME': 'ecopy369$Youtube',
         'HOST': 'ecopy369.mysql.pythonanywhere-services.com',
         'USER': 'ecopy369',
-        'PASSWORD': '@yasin112.com' 
+        'PASSWORD': '@yasin112.com'
     }
 }
 
