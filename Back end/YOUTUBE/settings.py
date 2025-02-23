@@ -34,6 +34,7 @@ ALLOWED_HOSTS = [
 ]
 
 
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -45,6 +46,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'video',
     'rest_framework',
+    'api',
+    'corsheaders',
+    'drf_yasg',
     'account',
 ]
 
