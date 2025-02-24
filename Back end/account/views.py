@@ -21,13 +21,13 @@ class LoginAPIView(APIView):
         password = request.data.get('password')
 
         if not login_value or not password:
-            return Response({"error": "لطفا login و password را وارد کنید."}, status=status.HTTP_400_BAD_REQUEST)
+            return Response({"error": "incorrect password"}, status=status.HTTP_400_BAD_REQUEST)
 
         user = authenticate(request, login=login_value, username=username, password=password)
         if user:
             token, created = Token.objects.get_or_create(user=user)
             return Response({"token": token.key}, status=status.HTTP_200_OK)
-        return Response({"error": "اطلاعات ورود نادرست است."}, status=status.HTTP_401_UNAUTHORIZED)
+        return Response({"error": "invalid data."}, status=status.HTTP_401_UNAUTHORIZED)
     
 
     def get(self,request):
