@@ -1,0 +1,32 @@
+.Shorts-video{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+}
+.top-navbar {
+    display: flex;
+    height: 80px;
+    width: 86%;
+    justify-content: space-between;
+    align-items: center;
+}
+.top-navbar img {
+    filter: invert(1);
+}
+
+.top-navbar div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sound-icon {
+    margin-right:  auto;
+}
+
+.play-icon{
+    margin-right: 40px;
+}
