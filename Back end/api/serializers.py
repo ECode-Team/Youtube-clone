@@ -1,23 +1,33 @@
 from rest_framework import serializers, viewsets, permissions
 from django.contrib.auth.models import User
-from video.models import Category,VIDEO
+from video.models import Category,VIDEO,Channel
 from account.models import Account,AccountManager
 
+class VideoSerializer(serializers.ModelSerializer):
+    category = serializers.StringRelatedField()
+    uploaded_by = serializers.StringRelatedField()
+    class Meta:
+        model = VIDEO
+        fields = '__all__'
 
 class CategorySerializer(serializers.ModelSerializer):
+    child_videos = VideoSerializer(many=True, read_only=True)
     class Meta:
         model = Category
-        fields = '__all__'
+        fields = ['id', 'title', 'slug', 'child_videos']
 
-class VideoSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = VIDEO
-        fields = '__all__'
+        
 
-class CreateVideoSerializer(serializers.ModelSerializer):
+class ChannelSerializer(serializers.ModelSerializer):
+    channel_videos = VideoSerializer(many=True, read_only=True)  # نمایش لیست ویدیوها در چنل
+
     class Meta:
-        model = VIDEO
-        fields = '__all__'
+        model = Channel
+        fields = [
+            "id", "title", "profile_picture", "description", 
+            "more_link", "subcribers", "count_video", "channel_videos"
+        ]
+
 
 
 class AccountSignUpSerializer(serializers.ModelSerializer):
@@ -33,9 +43,7 @@ class AccountSignUpSerializer(serializers.ModelSerializer):
         user.set_password(password)
         user.save()
 
-        # اضافه کردن کاربر به گروه 'users'
-        # group, created = Group.objects.get_or_create(name='users')
-        # user.groups.add(group)
+        
 
         return user
     

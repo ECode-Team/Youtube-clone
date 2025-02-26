@@ -8,9 +8,32 @@ from django.core.exceptions import ValidationError
 from django.core.validators import FileExtensionValidator
 from django.conf import settings
 
+
 #  category
 # __________________________________________________________________________________
+# Channel Model
+class Channel(models.Model):
+    title = models.CharField(max_length=255)
+    profile_picture = models.ImageField(upload_to="media/profile", blank=True)
+    description = models.TextField(blank=True, null=True)
+    more_link = models.URLField(max_length=200)
+    subcribers = models.IntegerField(default=0)
+    count_video = models.IntegerField(default=0)
+    created_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
 
+    class Meta:
+        verbose_name = "کانال"
+        verbose_name_plural = "کانال"
+        ordering = ['created_at']
+
+    def __str__(self):
+        return self.title
+    
+    def save(self, *args, **kwargs):
+        self.count_video = self.videos.count()  
+        super().save(*args, **kwargs)
+
+# Category Model
 class Category(models.Model):
     title = models.CharField(max_length=255, unique=True)
     slug = models.SlugField(max_length=255, unique=True, blank=True)
@@ -30,74 +53,33 @@ class Category(models.Model):
             self.slug = slugify(self.title)
         super().save(*args, **kwargs)
 
-
-
-
-# # video
-# # __________________________________________________________________________________
-
-
-
+# VIDEO Model
 class VIDEO(models.Model):
     category = models.ForeignKey(
         Category, null=True, blank=True, on_delete=models.PROTECT, related_name="videos"
     )
     title = models.CharField(max_length=255)
     thumbnail = models.ImageField(
-    upload_to="media/thumbnails",
-    validators=[FileExtensionValidator(allowed_extensions=['jpg', 'jpeg', 'png','avif','webp'])])
-    video_url = models.URLField( max_length=256,default="")
+        upload_to="media/thumbnails",
+        validators=[FileExtensionValidator(allowed_extensions=['jpg', 'jpeg', 'png','avif','webp'])]
+    )
+    video_url = models.URLField(max_length=256, default="")
     uuid = models.UUIDField(default=uuid4, unique=True, editable=False)
     description = models.TextField(blank=True, null=True)
     views = models.PositiveIntegerField(default=0)
     count_like = models.PositiveIntegerField(default=0)
-    uploaded_by = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    uploaded_by = models.ForeignKey(Channel, on_delete=models.CASCADE, related_name="videos")
+    uploaded_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         verbose_name = "ویدئو"
         verbose_name_plural = "ویدئوها"
-        ordering = ['-created_at']
+        ordering = ['-uploaded_by']
 
     def __str__(self):
         return self.title
 
-    def thumbnail_preview(self):
-
-        if self.thumbnail:
-            return format_html(
-                f"<img src='{self.thumbnail.url}' alt='{self.title}' width='100' height='60' >"
-            )
-        return "null"
-    thumbnail_preview.short_description = "thumbnail_preview"
-
-
-    def increment_like(self):
-        self.count_like += 1
-        self.save()
-
-    def decrement_like(self):
-        if self.count_like > 0:
-            self.count_like -= 1
-            self.save()
-
-    def save(self, *args, **kwargs):
-        super().save(*args, **kwargs)
-
-        # تغییر اندازه تصویر بندانگشتی
-        if self.thumbnail:
-            img = Image.open(self.thumbnail.path)
-
-            # تنظیم سایز تصویر
-            max_size = (720, 404)  # سایز استاندارد (عرض، ارتفاع)
-            img.thumbnail(max_size)
-
-            # ذخیره تصویر تغییر اندازه داده‌شده
-            img.save(self.thumbnail.path)
-
-# comment
-# __________________________________________________________________________________
+# Comment Model
 class Comment(models.Model):
     video = models.ForeignKey(
         VIDEO, on_delete=models.CASCADE, related_name='comments'
@@ -106,8 +88,7 @@ class Comment(models.Model):
     text = models.TextField()
     count_like = models.PositiveIntegerField(default=0)
     created_at = models.DateTimeField(auto_now_add=True)
-
-    # Add a `related_name` to avoid clashes with reverse accessor
+    
     replay = models.ForeignKey(
         'self',
         null=True,
@@ -125,22 +106,12 @@ class Comment(models.Model):
     def __str__(self):
         return f"comment for : {self.video.title}"
 
-    def increment_like(self):
-        self.count_like += 1
-        self.save()
-
-    def decrement_like(self):
-        if self.count_like > 0:
-            self.count_like -= 1
-            self.save()
-
-
+# Playlist Model
 class Playlist(models.Model):
     name = models.CharField(max_length=255)
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    channel = models.ForeignKey(Channel, on_delete=models.CASCADE, related_name="playlists")
     videos = models.ManyToManyField(VIDEO, related_name='playlists')
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f'{self.name} by {self.user.username}'
-
+        return f'{self.name} by {self.channel.title}'
