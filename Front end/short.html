@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>YouTube Short videos</title>
     <link rel="stylesheet" href="styles/video.css" />
     <link rel="stylesheet" href="styles/header/topic-bar.css" />
     <link rel="stylesheet" href="styles/sidebar/subescriptions.css">
@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="styles/sidebar/sidebar.css" />
     <link rel="stylesheet" href="styles/Shorts-video/short-container.css" />
     <link rel="stylesheet" href="styles/Shorts-video/navbar-top.css" />
+    <link rel="stylesheet" href="styles/Shorts-video/navbar-dwon.css" />
 </head>
 <body>
 
@@ -26,9 +27,11 @@
       <button class="menu-btn">
         <img class="nav-icon" src="imgs/Icons/Header/menu.svg" alt="">
       </button>
-      <div class="youtube-logo">
-        <img class="nav-icon" src="imgs/Icons/Header/Youtube.svg" alt="">
-      </div>
+      <a href="index.html">
+        <div class="youtube-logo">
+          <img class="nav-icon" src="imgs/Icons/Header/Youtube.svg" alt="">
+        </div>
+      </a>
     </div>
     <!-- middle -->
     <div class="middle-section">
@@ -153,14 +156,18 @@
     <!-- sidebar -->
     <div class="sidebar-container" tabindex="0">
       <div class="section-section">
-        <div class="sidebar-links-home">
-          <img class="sidebar-icon" src="imgs/Icons/sidebar/Home.svg">
-          <div class="sidebar-text">Home</div>
-        </div>
-        <div class="sidebar-links">
-          <img class="sidebar-icon" src="imgs/Icons/sidebar/Shorts.svg">
-          <div class="sidebar-text">Shorts</div>
-        </div>
+        <a href="index.html">
+          <div class="sidebar-links-home">
+            <img class="sidebar-icon" src="imgs/Icons/sidebar/Home.svg">
+            <div class="sidebar-text">Home</div>
+          </div>
+        </a>
+        <a href="short.html">
+          <div class="sidebar-links">
+            <img class="sidebar-icon" src="imgs/Icons/sidebar/Shorts.svg">
+            <div class="sidebar-text">Shorts</div>
+          </div>
+        </a>
         <div class="sidebar-links">
           <img class="sidebar-icon" src="imgs/Icons/sidebar/Subscription.svg">
           <div class="sidebar-text">Subscriptions</div>
@@ -344,20 +351,30 @@
       </div>
     </div>
 
-
   <div class="short-container">
     <div class="Shorts-video">
+      <img class="thumbnail-short" src="imgs/Short thumbnails/oar5.avif" alt="">
       <div class="top-navbar">
-        <div class="play-icon"><img src="imgs/Icons/Shorts video/puz-icon.svg" alt=""></div>
+        <div class="play-icon"><img src="imgs/Icons/Shorts video/puse-icon.svg" alt=""></div>
         <div class="sound-icon"><img src="imgs/Icons/Shorts video/sound-icon.svg" alt=""></div>
         <div class="full-scrin-icon"><img src="imgs/Icons/Shorts video/full-scrin-icon.svg" alt=""></div>
+      </div>
+      <div class="dwon-navbar">
+        <div class="section-left">
+          <div class="search-about"><img src="imgs/Icons/Shorts video/search-icon.svg" alt="">Search "mercedes avtr"</div>
+          <div class="profile-info"><img src="imgs/profiles/channels40_profile.jpg" alt=""><p>@SupercarBlondie</p>
+            <button>Subscribe</button>
+          </div>
+          <div class="play-more"><img src="imgs/Icons/Shorts video/puse-icon.svg" alt=""><p>World’s First Fire Breathing Tesla</p></div>
+          <div class="title-dwon"><p>The Mercedes AVTR is Insane 😱🔥 #shorts</p></div>
+        </div>
       </div>
    </div>
     <div class="tools-bar">
       <div class="section-down">
         <div class="cointainer-down">
           <div><img src="imgs/Icons/Shorts video/Like-icon.svg" alt=""></div>
-          <span>50K</span>
+          <span>4.6M</span>
         </div>
         <div class="cointainer-down">
           <div><img src="imgs/Icons/Shorts video/DisLike-icon.svg" alt=""></div>
@@ -365,7 +382,7 @@
         </div>
         <div class="cointainer-down">
           <div><img src="imgs/Icons/Shorts video/coment-icon.svg" alt=""></div>
-          <span>244</span>
+          <span>23K</span>
         </div>
         <div class="cointainer-down">
           <div><img src="imgs/Icons/Shorts video/Shere-icon.svg" alt=""></div>

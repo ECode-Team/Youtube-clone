@@ -32,7 +32,7 @@
   height: 470px;
 }
 
-.cointainer-down{
+.cointainer-down {
   display: flex;
   width: 100%;
   height: 70px;
@@ -42,7 +42,7 @@
   flex-direction: column;
 }
 
-.cointainer-down div { 
+.cointainer-down div {
   display: flex;
   height: 45px;
   width: 45px;
@@ -61,7 +61,6 @@
 
 .cointainer-down span {
   font-size: 14px;
-  font-family: Roboto, Arial;
 }
 
 .cointainer-down-music {
@@ -69,7 +68,7 @@
   align-items: center;
   justify-content: center;
 }
-.cointainer-down-music div{
+.cointainer-down-music div {
   display: flex;
   height: 43px;
   width: 43px;
