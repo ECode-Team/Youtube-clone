@@ -16,7 +16,7 @@ class CategorySerializer(serializers.ModelSerializer):
         model = Category
         fields = ['id', 'title', 'slug', 'child_videos']
 
-        
+
 
 class ChannelSerializer(serializers.ModelSerializer):
     channel_videos = VideoSerializer(many=True, read_only=True)  # نمایش لیست ویدیوها در چنل
@@ -24,7 +24,7 @@ class ChannelSerializer(serializers.ModelSerializer):
     class Meta:
         model = Channel
         fields = [
-            "id", "title", "profile_picture", "description", 
+            "id", "title", "profile_picture", "description",
             "more_link", "subcribers", "count_video", "channel_videos"
         ]
 
@@ -43,10 +43,10 @@ class AccountSignUpSerializer(serializers.ModelSerializer):
         user.set_password(password)
         user.save()
 
-        
+
 
         return user
-    
+
 class AccountLogInSerializer(serializers.ModelSerializer):
     class Meta:
         model = Account

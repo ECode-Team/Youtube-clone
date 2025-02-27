@@ -22,5 +22,5 @@ class VideoAdmin(admin.ModelAdmin):
 @admin.register(Channel)
 class ChannelAdmin(admin.ModelAdmin):
   list_display = ["title","profile_picture","subcribers","count_video"]
-  
+
 

@@ -28,9 +28,9 @@ class Channel(models.Model):
 
     def __str__(self):
         return self.title
-    
+
     def save(self, *args, **kwargs):
-        self.count_video = self.videos.count()  
+        self.count_video = self.videos.count()
         super().save(*args, **kwargs)
 
 # Category Model
@@ -56,7 +56,7 @@ class Category(models.Model):
 # VIDEO Model
 class VIDEO(models.Model):
     category = models.ForeignKey(
-        Category, null=True, blank=True, on_delete=models.PROTECT, related_name="videos"
+        Category, null=True, blank=True, on_delete=models.PROTECT, related_name="child_videos"
     )
     title = models.CharField(max_length=255)
     thumbnail = models.ImageField(
@@ -68,7 +68,7 @@ class VIDEO(models.Model):
     description = models.TextField(blank=True, null=True)
     views = models.PositiveIntegerField(default=0)
     count_like = models.PositiveIntegerField(default=0)
-    uploaded_by = models.ForeignKey(Channel, on_delete=models.CASCADE, related_name="videos")
+    uploaded_by = models.ForeignKey(Channel, on_delete=models.CASCADE, related_name="channel_videos")
     uploaded_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
@@ -88,7 +88,7 @@ class Comment(models.Model):
     text = models.TextField()
     count_like = models.PositiveIntegerField(default=0)
     created_at = models.DateTimeField(auto_now_add=True)
-    
+
     replay = models.ForeignKey(
         'self',
         null=True,
