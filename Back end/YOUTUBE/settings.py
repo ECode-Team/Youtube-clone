@@ -34,6 +34,7 @@ ALLOWED_HOSTS = [
 ]
 
 
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -45,6 +46,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'video',
     'rest_framework',
+    'api',
+    'corsheaders',
+    'drf_yasg',
+    'account',
 ]
 
 MIDDLEWARE = [
@@ -84,10 +89,10 @@ WSGI_APPLICATION = 'YOUTUBE.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ecopy369$default',
+        'NAME': 'ecopy369$Youtube',
         'HOST': 'ecopy369.mysql.pythonanywhere-services.com',
         'USER': 'ecopy369',
-        'PASSWORD': '@yasin112.com' 
+        'PASSWORD': '@yasin112.com'
     }
 }
 
@@ -144,3 +149,5 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTH_USER_MODEL = 'account.Account'

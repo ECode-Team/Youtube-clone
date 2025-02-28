@@ -1,8 +1,8 @@
 """
-URL configuration for YOUTUBE project.
+URL configuration for fake_youtube project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/5.1/topics/http/urls/
+    https://docs.djangoproject.com/en/4.2/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -21,9 +21,9 @@ from django.conf.urls.static import static
 
 
 urlpatterns = [
-    path("", include("video.urls")) ,
+    path("", include("api.urls")) ,
+    path("", include("account.urls")) ,
     path('admin/', admin.site.urls),
-    # ارور به دلیل لیست بودن یوارال ها
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

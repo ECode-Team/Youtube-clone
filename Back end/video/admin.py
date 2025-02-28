@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Category,Comment,VIDEO
+from .models import Category,Comment,VIDEO,Playlist,Channel
 
 
 @admin.register(Category)
@@ -16,5 +16,11 @@ class CommentAdmin(admin.TabularInline):
 
 @admin.register(VIDEO)
 class VideoAdmin(admin.ModelAdmin):
-  list_display = ["title","thumbnail","category","created_at"]
+  list_display = ["title","thumbnail","category","uploaded_by"]
+  inlines = [CommentAdmin]
+
+@admin.register(Channel)
+class ChannelAdmin(admin.ModelAdmin):
+  list_display = ["title","profile_picture","subcribers","count_video"]
+
 
