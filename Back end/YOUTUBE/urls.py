@@ -24,7 +24,6 @@ urlpatterns = [
     path("", include("api.urls")) ,
     path("", include("account.urls")) ,
     path('admin/', admin.site.urls),
-    # ارور به دلیل لیست بودن یوارال ها
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
