@@ -64,7 +64,7 @@ class VIDEO(models.Model):
     description = models.TextField(blank=True, null=True)
     views = models.PositiveIntegerField(default=0)
     count_like = models.PositiveIntegerField(default=0)
-    uploaded_by = models.ForeignKey(Channel, on_delete=models.CASCADE, related_name="channel_videos")
+    uploaded_by = models.ForeignKey(Channel, on_delete=models.CASCADE,null=True,blank=True, related_name="channel_videos")
     uploaded_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
@@ -73,7 +73,7 @@ class VIDEO(models.Model):
         ordering = ['-uploaded_at']
 
     def __str__(self):
-        return f"{self.title} ({self.uploaded_by.title})"
+        return self.title
 
 class Comment(models.Model):
     video = models.ForeignKey(VIDEO, on_delete=models.CASCADE, related_name='comments')
