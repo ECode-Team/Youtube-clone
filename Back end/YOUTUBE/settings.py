@@ -53,6 +53,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -92,7 +93,7 @@ DATABASES = {
         'NAME': 'ecopy369$Youtube',
         'HOST': 'ecopy369.mysql.pythonanywhere-services.com',
         'USER': 'ecopy369',
-        'PASSWORD': '@yasin112.com'
+        'PASSWORD': 'salar123456789'
     }
 }
 
@@ -132,6 +133,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 
+CORS_ALLOW_ALL_ORIGINS = True
+
+
+CORS_ALLOW_CREDENTIALS = True
 
 # مسیر فولدر static برای دسترسی به فایل‌های استاتیک
 STATIC_URL = '/static/'
