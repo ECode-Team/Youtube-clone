@@ -76,4 +76,4 @@ cd Youtube
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE.md) file for details.
+This project is licensed under the MIT License. See the [LICENSE](Documents/LICENSE.md) file for details.
