@@ -1,6 +1,7 @@
 .Short-video-container {
+  display: block;
   height: 545px;
-  margin: 25px 0px 35px 0px;
+  margin: 25px 0px 75px 0px;
 }
 
 .navbar-short-video {
@@ -20,6 +21,7 @@
   width: 25px;
 }
 .short-video-box {
+  max-width: 260px;
   cursor: pointer;
 }
 .navbar-short-video span {
@@ -41,8 +43,7 @@
 }
 
 .Short-video-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  display: flex;
   column-gap: 15px;
 }
 .short-thumbnail img {
