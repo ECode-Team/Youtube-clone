@@ -3,8 +3,8 @@ from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.generics import ListAPIView, RetrieveUpdateDestroyAPIView,RetrieveAPIView
 from rest_framework.views import APIView
-from video.models import Category, VIDEO,Channel
-from api.serializers import CategorySerializer, VideoSerializer,ChannelSerializer
+from video.models import Category, VIDEO,Channel,VIDEO_SHORT
+from api.serializers import CategorySerializer, VideoSerializer,ChannelSerializer,VideoShortSerializer
 
 # category
 class ListCategory(RetrieveAPIView):
@@ -12,7 +12,12 @@ class ListCategory(RetrieveAPIView):
     serializer_class = CategorySerializer
     lookup_field = "title"
 
-
+    
+# short video
+class ListVideoShort(RetrieveAPIView):
+    queryset = VIDEO_SHORT.objects.all()
+    serializer_class = VideoShortSerializer
+    
 
 # video
 class ListVideo(ListAPIView):

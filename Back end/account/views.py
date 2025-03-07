@@ -1,6 +1,6 @@
 from rest_framework import generics
 from .models import Account
-from api_video.serializers import AccountSignUpSerializer, AccountLogInSerializer
+from api.serializers import AccountSignUpSerializer, AccountLogInSerializer
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
