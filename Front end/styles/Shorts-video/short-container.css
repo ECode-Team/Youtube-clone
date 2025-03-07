@@ -1,19 +1,77 @@
+:root {
+  --Ztext-color: #000000;
+  --Zmain-color: #ffffff;
+  --Zbutton-color: rgb(244, 244, 244);
+  --Zhover-color: rgb(228, 228, 228);
+  --Zicon-color: 0;
+}
+
+.dark-mode {
+  --Ztext-color: white;
+  --Zmain-color: #0f0f0f;
+  --Zbutton-color: rgb(42, 42, 42);
+  --Zhover-color: rgb(60, 60, 60);
+  --Zicon-color: 1;
+}
+
 .short-container {
   margin: -70px 100px 0px 508px;
-  width: 32.8%;
+  width: 475px;
   height: 715px;
   display: flex;
 }
 
-.Shorts-video {
-  width: 100%;
-  height: 100%;
-  background-color: rgb(0, 0, 0);
-  border-radius: 12px;
+.tools-bar {
+  display: flex;
+  align-items: end;
+  width: 85px;
 }
 
-.tools-bar {
-  width: 70px;
-  border-radius: 12px;
-  background-color: rgb(216, 21, 21);
+.section-down {
+  width: 100%;
+  height: 470px;
+}
+
+.cointainer-down {
+  display: flex;
+  width: 100%;
+  height: 70px;
+  padding-top: 16px;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.cointainer-down div {
+  display: flex;
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  background-color: var(--Zbutton-color);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.cointainer-down div:hover {
+  background-color: var(--Zhover-color);
+}
+.cointainer-down img {
+  filter: invert(var(--Zicon-color));
+}
+
+.cointainer-down span {
+  font-size: 14px;
+}
+
+.cointainer-down-music {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cointainer-down-music div {
+  display: flex;
+  height: 43px;
+  width: 43px;
+  border-radius: 10%;
+  background-color: rgb(0, 0, 0);
 }

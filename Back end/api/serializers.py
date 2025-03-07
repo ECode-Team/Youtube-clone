@@ -71,7 +71,7 @@ class AccountSignUpSerializer(serializers.ModelSerializer):
         # user.groups.add(group)
 
         return user
-    
+
 class AccountLogInSerializer(serializers.ModelSerializer):
     class Meta:
         model = Account

@@ -1,4 +1,5 @@
 :root {
+    --atp-sub-color: black;
     --atptext-color: rgb(59, 59, 59);
     --atpmain-color: #ffffff;
     --atpbutton-color: rgb(228, 228, 228);
@@ -8,6 +9,7 @@
 }
 
 .dark-mode {
+    --atp-sub-color: white;
     --atptext-color: rgb(197, 197, 197);
     --atpmain-color: #0f0f0f;
     --atpbutton-color: rgb(42, 42, 42);
@@ -66,7 +68,7 @@
     line-height: 1.1;
     padding: 10px;
     margin-left: 35px;
-    background-color: var(--atpicon-color);
+    background-color: var(--atp-sub-color);
     color: var(--atpmain-color);
     border: none;
     border-radius: 20px;
@@ -131,8 +133,8 @@
     border-right: 1px solid rgb(205, 205, 205);
 }
 
-.action.like.liked {
-    
+.icon.liked {
+    display: none;
 }
 
 .action.dislike {

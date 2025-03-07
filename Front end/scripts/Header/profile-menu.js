@@ -1,16 +1,7 @@
 //Access to html classess
-const profileMenu = document.querySelector('.profile-menu');
-const profileBtn = document.querySelector('.profile-pic');
-const appearance = document.querySelector('.menu-item-2.Appearance');
-const themeToggle = document.querySelector('.theme-toggle');
-const backFlash = document.querySelector('.theme-back-flash');
-const deviceTick = document.querySelector('.theme-tick.device');
-const darkTick = document.querySelector('.theme-tick.dark');
-const lightTick = document.querySelector('.theme-tick.light');
-const deviceTheme = document.querySelector('.theme-Mode.device');
-const darkTheme = document.querySelector('.theme-Mode.dark');
-const lightTheme = document.querySelector('.theme-Mode.light');
+const [profileBtn, themeToggle, backFlash, deviceTheme, deviceTick, darkTheme, darkTick, lightTheme, lightTick, profileMenu, appearance] = [...document.querySelectorAll('.profile-pic, .theme-toggle, .theme-back-flash, .theme-Mode.device, .theme-tick.device, .theme-Mode.dark, .theme-tick.dark, .theme-Mode.light, .theme-tick.light, .profile-menu, .menu-item-2.Appearance')];
 
+// Appearance window system
 profileBtn.addEventListener('click', () => {
     profileMenu.classList.toggle('profile-opend')
 });
@@ -41,23 +32,17 @@ backFlash.addEventListener('click', () => {
     profileMenu.classList.add('profile-opend');
 });
 
-deviceTheme.addEventListener('click', () => {
-    document.documentElement.classList.remove('dark-mode');
-    darkTick.style.opacity = '0';
-    deviceTick.style.opacity = "1";
-    lightTick.style.opacity = "0";
-});
+// Appearance system with local storage
+localStorage.getItem('DarkMode') === 'true' ? setAppearance(true, [1, 0, 0]) : setAppearance(false, [0, 0, 1]);
 
-darkTheme.addEventListener('click', () => {
-    document.documentElement.classList.add('dark-mode'); 
-    darkTick.style.opacity = '1';
-    deviceTick.style.opacity = "0";
-    lightTick.style.opacity = "0";
-});
+function setAppearance(isDark, [D, DV, L]) {
+    document.documentElement.classList.toggle('dark-mode', isDark);
+    darkTick.style.opacity = `${D}`;
+    deviceTick.style.opacity = `${DV}`;
+    lightTick.style.opacity = `${L}`;
+    localStorage.setItem('DarkMode', `${isDark}`)
+}
 
-lightTheme.addEventListener('click', () => {
-    document.documentElement.classList.remove('dark-mode');
-    darkTick.style.opacity = '0';
-    deviceTick.style.opacity = "0";
-    lightTick.style.opacity = "1";
-});
+deviceTheme.addEventListener('click', () => setAppearance(false, [0, 1, 0]));
+darkTheme.addEventListener('click', () => setAppearance(true, [1, 0, 0]));
+lightTheme.addEventListener('click', () => setAppearance(false, [0, 0, 1]));

@@ -3,6 +3,10 @@
   --gray-color: #686868;
 }
 
+* {
+  font-family:  Roboto, Arial, sans-serif;
+}
+
 p {
   margin-top: 0px;
 }
@@ -13,12 +17,6 @@ a {
   /* remove anchor blue color  */
 }
 
-h3,
-a,
-li,
-p {
-  font-family: Roboto, Arial;
-}
 
 html.dark-mode {
   background-color: var(--dark-color);

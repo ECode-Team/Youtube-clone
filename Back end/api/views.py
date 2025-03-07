@@ -37,4 +37,4 @@ class ChannelDetailView(RetrieveAPIView):
     queryset = Channel.objects.all()
     serializer_class = ChannelSerializer
     lookup_field = "title"
-    
+
