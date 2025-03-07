@@ -86,7 +86,7 @@ class VIDEO_SHORT(models.Model):
         upload_to="media/thumbnails",
         validators=[FileExtensionValidator(allowed_extensions=['jpg', 'jpeg', 'png','avif','webp'])]
     )
-    video_url = models.URLField(max_length=256, default="")
+    video_url = models.URLField(max_length=256, default="https://www.youtube.com/embed/")
     uuid = models.UUIDField(default=uuid4, unique=True, editable=False)
     description = models.TextField(blank=True, null=True)
     views = models.PositiveIntegerField(default=0)

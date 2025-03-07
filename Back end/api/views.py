@@ -14,7 +14,7 @@ class ListCategory(RetrieveAPIView):
 
     
 # short video
-class ListVideoShort(RetrieveAPIView):
+class ListVideoShort(ListAPIView):
     queryset = VIDEO_SHORT.objects.all()
     serializer_class = VideoShortSerializer
     

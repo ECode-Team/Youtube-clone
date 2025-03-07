@@ -5,12 +5,6 @@ from account.models import Account,AccountManager
 from django.utils import timezone
 from datetime import timedelta
 
-class VideoShortSerializer(serializers.ModelSerializer):
-    category = serializers.StringRelatedField()
-    class Meta:
-        model = VIDEO_SHORT
-        fields = '__all__'
-
 class ChannelSerializer(serializers.ModelSerializer):
 
     class Meta:
@@ -19,6 +13,33 @@ class ChannelSerializer(serializers.ModelSerializer):
             "id", "title", "profile_picture", "description", 
             "more_link", "subcribers", "count_video", 
         ]
+
+        
+class VideoShortSerializer(serializers.ModelSerializer):
+    category = serializers.StringRelatedField()
+    uploaded_by = ChannelSerializer()
+    views = serializers.SerializerMethodField()
+    count_like = serializers.SerializerMethodField()
+    class Meta:
+        model = VIDEO_SHORT
+        fields = '__all__'
+
+
+    def get_views(self, obj):
+        return self.format_large_number(obj.views)
+
+
+    def get_count_like(self, obj):
+        return self.format_large_number(obj.count_like)
+
+
+    def format_large_number(self, number):
+        if number >= 1_000_000:
+            return f"{number / 1_000_000:.1f}M"
+        elif number >= 1_000:
+            return f"{number / 1_000:.1f}K"
+        else:
+            return str(number)
 
 class VideoSerializer(serializers.ModelSerializer):
     category = serializers.StringRelatedField()
