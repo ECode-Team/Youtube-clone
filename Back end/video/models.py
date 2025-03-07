@@ -64,12 +64,41 @@ class VIDEO(models.Model):
     description = models.TextField(blank=True, null=True)
     views = models.PositiveIntegerField(default=0)
     count_like = models.PositiveIntegerField(default=0)
-    uploaded_by = models.ForeignKey(Channel, on_delete=models.CASCADE,null=True,blank=True, related_name="channel_videos")
+    uploaded_by = models.ForeignKey(Channel, on_delete=models.CASCADE, related_name="channel_videos")
     uploaded_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         verbose_name = "ویدئو"
         verbose_name_plural = "ویدئوها"
+        ordering = ['-uploaded_at']
+
+    def __str__(self):
+        return self.title
+
+
+
+# short video model
+class VIDEO_SHORT(models.Model):
+    category = models.ForeignKey(
+        Category, null=True, blank=True, on_delete=models.PROTECT, related_name="child_short_videos"
+    )
+    title = models.CharField(max_length=255)
+    thumbnail = models.ImageField(
+        upload_to="media/thumbnails",
+        validators=[FileExtensionValidator(allowed_extensions=['jpg', 'jpeg', 'png','avif','webp'])]
+    )
+    video_url = models.URLField(max_length=256, default="https://www.youtube.com/embed/")
+    uuid = models.UUIDField(default=uuid4, unique=True, editable=False)
+    description = models.TextField(blank=True, null=True)
+    views = models.PositiveIntegerField(default=0)
+    count_like = models.PositiveIntegerField(default=0)
+    uploaded_by = models.ForeignKey(Channel, on_delete=models.CASCADE, related_name="channel_short_videos")
+
+    uploaded_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name = "ویدئو"
+        verbose_name_plural = " ویدئوهای کوتاه"
         ordering = ['-uploaded_at']
 
     def __str__(self):

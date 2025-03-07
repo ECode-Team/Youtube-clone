@@ -1,16 +1,31 @@
 from rest_framework import serializers, viewsets, permissions
 from django.contrib.auth.models import User
-from video.models import Category,VIDEO,Channel
+from video.models import Category,VIDEO,Channel,VIDEO_SHORT
 from account.models import Account,AccountManager
 from django.utils import timezone
 from datetime import timedelta
 
+class VideoShortSerializer(serializers.ModelSerializer):
+    category = serializers.StringRelatedField()
+    class Meta:
+        model = VIDEO_SHORT
+        fields = '__all__'
+
+class ChannelSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Channel
+        fields = [
+            "id", "title", "profile_picture", "description", 
+            "more_link", "subcribers", "count_video", 
+        ]
+
 class VideoSerializer(serializers.ModelSerializer):
     category = serializers.StringRelatedField()
-    uploaded_by = serializers.StringRelatedField()
+    uploaded_by = ChannelSerializer()
     views = serializers.SerializerMethodField()
     count_like = serializers.SerializerMethodField()
-    time_since_uploaded = serializers.SerializerMethodField()
+    
     class Meta:
         model = VIDEO
         fields = '__all__'
@@ -31,52 +46,12 @@ class VideoSerializer(serializers.ModelSerializer):
         else:
             return str(number)
 
-    def get_time_since_uploaded(self, obj):
-        # محاسبه تفاوت زمانی بین زمان فعلی و زمان آپلود
-        now = timezone.now()
-        time_difference = now - obj.uploaded_at
-
-        # بررسی اختلاف زمانی
-        if time_difference < timedelta(minutes=1):
-            return f"{int(time_difference.total_seconds())} seconds"
-        elif time_difference < timedelta(hours=1):
-            minutes = int(time_difference.total_seconds() // 60)
-            return f"{minutes} minutes"
-        elif time_difference < timedelta(days=1):
-            hours = int(time_difference.total_seconds() // 3600)
-            return f"{hours} hours"
-        elif time_difference < timedelta(weeks=1):
-            days = int(time_difference.total_seconds() // 86400)
-            return f"{days} days"
-        elif time_difference < timedelta(weeks=4):
-            weeks = int(time_difference.total_seconds() // 604800)
-            return f"{weeks} weeks"
-        elif time_difference < timedelta(weeks=52):
-            months = int(time_difference.total_seconds() // 2592000)
-            return f"{months} months"
-        else:
-            years = int(time_difference.total_seconds() // 31536000)
-            return f"{years} years"
-
+            
 class CategorySerializer(serializers.ModelSerializer):
     child_videos = VideoSerializer(many=True, read_only=True)
     class Meta:
         model = Category
         fields = ['id', 'title', 'slug', 'child_videos']
-
-
-
-class ChannelSerializer(serializers.ModelSerializer):
-    channel_videos = VideoSerializer(many=True, read_only=True)  # نمایش لیست ویدیوها در چنل
-
-    class Meta:
-        model = Channel
-        fields = [
-            "id", "title", "profile_picture", "description",
-            "more_link", "subcribers", "count_video", "channel_videos"
-        ]
-
-
 
 class AccountSignUpSerializer(serializers.ModelSerializer):
     password = serializers.CharField(write_only=True, required=True)
@@ -91,7 +66,9 @@ class AccountSignUpSerializer(serializers.ModelSerializer):
         user.set_password(password)
         user.save()
 
-
+        # اضافه کردن کاربر به گروه 'users'
+        # group, created = Group.objects.get_or_create(name='users')
+        # user.groups.add(group)
 
         return user
 
