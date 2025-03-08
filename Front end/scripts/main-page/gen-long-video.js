@@ -3,13 +3,10 @@ export const videoElementsArray = [];
 
 export async function loadVideos() {
   await fetchVideo();
-  // Access to html elements
-  const videoGrid = document.querySelector(".video-grid");
 
   Videos.forEach((video) => {
     const videoElement = document.createElement("a");
     videoElement.href = `video.html?video=${encodeURIComponent(video.link)}`;
-    videoGrid.appendChild(videoElement);
 
     videoElement.innerHTML = `<div class="video-preview">
         <!--thumbnail-->

@@ -17,10 +17,14 @@
 .short-container {
   margin: -70px 100px 0px 508px;
   width: 475px;
-  height: 715px;
+  height: 89vh;
   display: flex;
 }
-
+.shortFrame {
+  width: 25vw;
+  margin-right: 12px;
+  border-radius: 12px;
+}
 .tools-bar {
   display: flex;
   align-items: end;

@@ -1,17 +1,18 @@
-import {videoElementsArray, loadVideos} from './gen-long-video.js';
+import { videoElementsArray, loadVideos } from './gen-long-video.js';
+import {shortElementsArray, loadShorts} from './gen-short-video.js';
 
 export function adjustLayout() {
     // Access to html elements
-    const [container, shortContainer, shortSection] = [...document.querySelectorAll('.content-container, .Short-video-container, .Short-video-section')];
-    const shorts = Array.from(shortSection.children);
+    const [container, shortContainer] = [...document.querySelectorAll('.content-container, .Short-video-container')];
+    const videoPreview = document.querySelectorAll('.video-preview');
     const screenWith = document.querySelector('.content-container').getBoundingClientRect().width;
-    
+
     // Calculate max short per row
     const maxShortPerRow = Math.round(screenWith / 260);
     const maxLongPerRow = Math.round(screenWith / 370);
 
     // Shorts responsive
-    shorts.forEach((short, index) => {
+    shortElementsArray.forEach((short, index) => {
         if (index >= maxShortPerRow) {
             short.style.display = 'none';
         } else {
@@ -30,7 +31,7 @@ export function adjustLayout() {
     container.insertBefore(currentRow, shortContainer);
 
     let videoPerRow = 0;
-    videoElementsArray.forEach((video) => {
+    videoElementsArray.forEach((video, index) => {
         if (videoPerRow < maxLongPerRow) {
             currentRow.appendChild(video);
             videoPerRow++;
@@ -47,6 +48,7 @@ export function adjustLayout() {
 // Wait for videos to be generate
 async function initialize() {
     await loadVideos();
+    await loadShorts();
     adjustLayout();
 }
 
