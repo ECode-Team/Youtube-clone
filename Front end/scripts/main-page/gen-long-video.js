@@ -1,17 +1,17 @@
 import { Videos, fetchVideo } from "../fetchVideo.js";
 export const videoElementsArray = [];
 
-async function loadVideos() {
-    await fetchVideo();
-    // Access to html elements
-    const videoGrid = document.querySelector(".video-grid");
+export async function loadVideos() {
+  await fetchVideo();
+  // Access to html elements
+  const videoGrid = document.querySelector(".video-grid");
 
-    Videos.forEach((video) => {
-        const videoElement = document.createElement("a");
-        videoElement.href = `video.html?video=${encodeURIComponent(video.link)}`;
-        videoGrid.appendChild(videoElement);
-        
-        videoElement.innerHTML = `<div class="video-preview">
+  Videos.forEach((video) => {
+    const videoElement = document.createElement("a");
+    videoElement.href = `video.html?video=${encodeURIComponent(video.link)}`;
+    videoGrid.appendChild(videoElement);
+
+    videoElement.innerHTML = `<div class="video-preview">
         <!--thumbnail-->
         <div class="thumbnail-row">
           <img class="thumbnail" src="${video.Thumbnail}" />
@@ -32,7 +32,6 @@ async function loadVideos() {
         </div>
       </div>`
 
-      videoElementsArray.push(videoElement);
-    })
+    videoElementsArray.push(videoElement);
+  })
 }
-loadVideos();
