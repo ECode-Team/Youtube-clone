@@ -1,12 +1,3 @@
-.Shorts-video {
-  display: flex;
-  width: auto;
-  height: auto;
-  border-radius: 12px;
-  justify-content: center;
-  position: relative;
-}
-
 .thumbnail-short {
   border-radius: 12px;
 }

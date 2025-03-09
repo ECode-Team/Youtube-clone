@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YouTube Short videos</title>
-    <link rel="stylesheet" href="styles/video.css" />
-    <link rel="stylesheet" href="styles/header/topic-bar.css" />
     <link rel="stylesheet" href="styles/sidebar/subescriptions.css">
     <link rel="stylesheet" href="styles/sidebar/Explore.css">
     <link rel="stylesheet" href="styles/sidebar/more-form.css">
@@ -14,10 +12,11 @@
     <link rel="stylesheet" href="styles/header/profile-menu.css" />
     <link rel="stylesheet" href="styles/header/navbar.css" />
     <link rel="stylesheet" href="styles/sidebar/sidebar.css" />
-    <link rel="stylesheet" href="styles/Shorts-video/short-container.css" />
-    <link rel="stylesheet" href="styles/Shorts-video/navbar-top.css" />
-    <link rel="stylesheet" href="styles/Shorts-video/navbar-dwon.css" />
-</head>
+    <link rel="stylesheet" href="styles/Shorts video/SH-container.css" />
+    <link rel="stylesheet" href="styles/Shorts video/SH-top.css" />
+    <link rel="stylesheet" href="styles/Shorts video/SH-dwon.css" />
+    <link rel="stylesheet" href="styles/Shorts video/SH-action.css" />
+  </head>
 <body>
 
   <!-- header -->
@@ -351,55 +350,79 @@
       </div>
     </div>
 
+  <!-- short video container -->
   <div class="short-container">
+    <!-- video container -->
     <div class="Shorts-video">
       <img class="thumbnail-short" src="imgs/Short thumbnails/oar5.avif" alt="">
+
+      <!-- up -->
       <div class="top-navbar">
         <div class="play-icon"><img src="imgs/Icons/Shorts video/puse-icon.svg" alt=""></div>
         <div class="sound-icon"><img src="imgs/Icons/Shorts video/sound-icon.svg" alt=""></div>
         <div class="full-scrin-icon"><img src="imgs/Icons/Shorts video/full-scrin-icon.svg" alt=""></div>
       </div>
+
+      <!-- down -->
       <div class="dwon-navbar">
         <div class="section-left">
           <div class="search-about"><img src="imgs/Icons/Shorts video/search-icon.svg" alt="">Search "mercedes avtr"</div>
           <div class="profile-info"><img src="imgs/profiles/channels40_profile.jpg" alt=""><p>@SupercarBlondie</p>
-            <button>Subscribe</button>
+            <button class="">Subscribe</button>
           </div>
           <div class="play-more"><img src="imgs/Icons/Shorts video/puse-icon.svg" alt=""><p>World’s First Fire Breathing Tesla</p></div>
           <div class="title-dwon"><p>The Mercedes AVTR is Insane 😱🔥 #shorts</p></div>
         </div>
       </div>
    </div>
+
+   <!-- tools container -->
     <div class="tools-bar">
       <div class="section-down">
-        <div class="cointainer-down">
-          <div><img src="imgs/Icons/Shorts video/Like-icon.svg" alt=""></div>
+
+        <!-- Action -->
+        <!-- Like & dislike -->
+        <div class="Action like">
+          <button class="icon like"><img src="imgs/Icons/Shorts video/Like-icon.svg" alt=""></button>
+          <button class="icon liked"><img src="" alt=""></button>
           <span>4.6M</span>
         </div>
-        <div class="cointainer-down">
-          <div><img src="imgs/Icons/Shorts video/DisLike-icon.svg" alt=""></div>
+
+        <div class="Action dislike">
+          <button class="icon dislike"><img src="imgs/Icons/Shorts video/DisLike-icon.svg" alt=""></button>
+          <span class="icon disliked"><img src="" alt=""></span>
           <span>Dislike</span>
         </div>
-        <div class="cointainer-down">
-          <div><img src="imgs/Icons/Shorts video/coment-icon.svg" alt=""></div>
+        
+        <!-- comment -->
+        <div class="Action comment">
+          <button class="icon"><img src="imgs/Icons/Shorts video/coment-icon.svg" alt=""></button>
           <span>23K</span>
         </div>
-        <div class="cointainer-down">
-          <div><img src="imgs/Icons/Shorts video/Shere-icon.svg" alt=""></div>
+
+        <!-- share -->
+        <div class="Action share">
+          <button class="icon"><img src="imgs/Icons/Shorts video/Shere-icon.svg" alt=""></button>
           <span>Shere</span>
         </div>
-        <div class="cointainer-down"> 
-          <div><img src="imgs/Icons/Shorts video/menu-icon.svg" alt=""></div>
+
+        <!-- more -->
+        <div class="Action more"> 
+          <button class="icon"><img src="imgs/Icons/Shorts video/menu-icon.svg" alt=""></button>
         </div>
-        <div class="cointainer-down-music">
-          <div><img src="" alt=""></div>
+
+        <!-- music -->
+        <div class="Action music">
+          <button class="icon music"><img src="" alt=""></button>
         </div>
+        
       </div>
     </div>
   </div>
 
-  <script src="scripts/main-page/sidebar.js"></script>
-  <script src="scripts/Header/profile-menu.js"></script>
+  <script src="js/main-page/sidebar.js"></script>
+  <script src="js/Header/profile-menu.js"></script>
+  <script src="js/short/Like.js"></script>
 
 </body>
 </html>

@@ -59,6 +59,11 @@
   font-size: 12px;
   font-weight: 700;
 }
+
+.profile-info button:hover{
+  background-color: rgb(231, 231, 231);
+}
+
 .play-more {
   display: flex;
   align-items: center;
