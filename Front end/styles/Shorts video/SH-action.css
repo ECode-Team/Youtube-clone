@@ -1,16 +1,20 @@
 :root {
-  --Ztext-color: rgb(0, 0, 0);
   --Zmain-color: #ffffff;
   --Zbutton-color: rgb(244, 244, 244);
   --Zhover-color: rgb(228, 228, 228);
+  --Zliked-color: black;
+  --Zliked-H-color: rgb(39, 39, 39);
+  --Zicon-L-color: 1;
   --Zicon-color: 0;
 }
 
 .dark-mode {
-  --Ztext-color: rgb(255, 255, 255);
   --Zmain-color: #0f0f0f;
   --Zbutton-color: rgb(42, 42, 42);
   --Zhover-color: rgb(60, 60, 60);
+  --Zliked-color: white;
+  --Zliked-H-color: rgb(211, 211, 211);
+  --Zicon-L-color: 0;
   --Zicon-color: 1;
 }
 
@@ -27,7 +31,7 @@
   padding-top: 16px;
   align-items: center;
   justify-content: center;
-  flex-direction: column; 
+  flex-direction: column;
 }
 
 .icon {
@@ -46,6 +50,19 @@
   filter: invert(var(--Zicon-color));
 }
 
+.icon.like.liked,.icon.dislike.disliked{
+  background-color: var(--Zliked-color);
+}
+
+.icon.like.liked img,.icon.dislike.disliked img{
+  filter: invert(var(--Zicon-L-color));
+}
+
+.icon.like.liked:hover,.icon.dislike.disliked:hover {
+  background-color: var(--Zliked-H-color);
+}
+
+
 .Action span {
   height: 23px;
   display: flex;
@@ -58,15 +75,9 @@
   background-color: var(--Zhover-color);
 }
 
-.icon.liked,
-.icon.disliked {
-  display: none;
-}
-
 .icon.music {
   height: 40px;
   width: 40px;
   border-radius: 10%;
   background-color: rgb(0, 0, 0);
 }
-
