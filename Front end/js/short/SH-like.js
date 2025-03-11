@@ -1,14 +1,26 @@
 const like = document.querySelector(".icon.like");
 const dislike = document.querySelector(".icon.dislike");
 
+
 function toggleLike(element, child, opposite, oppositeChild) {
     return () => {
-        element.classList.toggle(child);
+        const change = element.classList.toggle(child);
 
-        if (opposite.classList.contains(oppositeChild)) {
+        if (change) {
             opposite.classList.remove(oppositeChild);
+            localStorage.setItem("isLike", child);
+        } else {
+            localStorage.removeItem("isLike");
         }
     };
+}
+
+const chek = localStorage.getItem("isLike")
+
+if (chek === "like") {
+    like.classList.add("liked");
+} else {
+    dislike.classList.add("disliked");
 }
 
 like.addEventListener("click", toggleLike(like, "liked", dislike, "disliked"));
