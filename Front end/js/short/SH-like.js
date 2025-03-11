@@ -3,10 +3,10 @@ const dislike = document.querySelector(".icon.dislike");
 
 function toggleLike(element, child, opposite, oppositeChild) {
     return () => {
-        element.classList.toggle(child); // دکمه‌ی کلیک شده را تغییر وضعیت بده
+        element.classList.toggle(child);
 
         if (opposite.classList.contains(oppositeChild)) {
-            opposite.classList.remove(oppositeChild); // دکمه‌ی مخالف را غیرفعال کن
+            opposite.classList.remove(oppositeChild);
         }
     };
 }
