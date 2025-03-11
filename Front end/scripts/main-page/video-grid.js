@@ -1,10 +1,10 @@
-import { videoElementsArray, loadVideos } from './gen-long-video.js';
-import {shortElementsArray, loadShorts} from './gen-short-video.js';
+import { fetchVideo } from '../fetchVideo.js';
+import { videoElementsArray, createPlaceholder, checkVisiblePart } from './gen-long-video.js';
+import { shortElementsArray, loadShorts } from './gen-short-video.js';
 
 export function adjustLayout() {
     // Access to html elements
     const [container, shortContainer] = [...document.querySelectorAll('.content-container, .Short-video-container')];
-    const videoPreview = document.querySelectorAll('.video-preview');
     const screenWith = document.querySelector('.content-container').getBoundingClientRect().width;
 
     // Calculate max short per row
@@ -31,7 +31,7 @@ export function adjustLayout() {
     container.insertBefore(currentRow, shortContainer);
 
     let videoPerRow = 0;
-    videoElementsArray.forEach((video, index) => {
+    videoElementsArray.forEach((video) => {
         if (videoPerRow < maxLongPerRow) {
             currentRow.appendChild(video);
             videoPerRow++;
@@ -47,10 +47,13 @@ export function adjustLayout() {
 
 // Wait for videos to be generate
 async function initialize() {
-    await loadVideos();
+    await fetchVideo();
+    await createPlaceholder();
+    await checkVisiblePart();
     await loadShorts();
     adjustLayout();
 }
 
 window.addEventListener('load', initialize);
+window.addEventListener('scroll', checkVisiblePart);
 window.addEventListener('resize', adjustLayout);

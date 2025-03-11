@@ -1,34 +1,60 @@
-import { Videos, fetchVideo } from "../fetchVideo.js";
+import { Videos } from "../fetchVideo.js";
 export const videoElementsArray = [];
 
-export async function loadVideos() {
-  await fetchVideo();
+export async function createPlaceholder() {
+  Videos.forEach(() => {
+    const placeHolder = document.createElement("div");
+    placeHolder.classList.add("placeholder");
 
-  Videos.forEach((video) => {
-    const videoElement = document.createElement("a");
-    videoElement.href = `video.html?video=${encodeURIComponent(video.link)}`;
+    placeHolder.innerHTML = `<div class="PHthumbnail"></div>
+    <div class="PHinfo">
+        <span class="PHprofile"></span>
+        <div class="PHtitle"></div>
+    </div>`;
 
-    videoElement.innerHTML = `<div class="video-preview">
-        <!--thumbnail-->
-        <div class="thumbnail-row">
-          <img class="thumbnail" src="${video.Thumbnail}" />
-          <div class="video-time">9:30</div>
-        </div>
-        <div class="video-info-grid">
-          <div class="channel-picture">
-            <img class="profile-picture" src="imgs/profiles/unnamed.jpg" />
-          </div>
-          <div class="video-info">
-            <div class="video-title">
-              <span>${video.Title}</span>
-              <img src="imgs/Icons/Shorts video/menu-icon.svg">
-            </div>
-            <p class="video-author">${video.Channel}</p>
-            <p class="video-stats">${video.Views}</p>
-          </div>
-        </div>
-      </div>`
-
-    videoElementsArray.push(videoElement);
+    videoElementsArray.push(placeHolder);
   })
+}
+
+export async function checkVisiblePart() {
+  console.log('hello');
+
+  videoElementsArray.forEach((placeHolder, index) => {
+    const rect = placeHolder.getBoundingClientRect();
+    const videoHeight = rect.height;
+    const visiblePart = Math.min(window.innerHeight, rect.bottom) - Math.max(0, rect.top);
+
+    if (visiblePart > videoHeight * 0.3) {
+      loadVideos(index)
+    }
+  })
+}
+
+async function loadVideos(index) {
+  const video = Videos[index];
+  const videoElement = document.createElement("a");
+  videoElement.href = `video.html?video=${encodeURIComponent(video.link)}`;
+
+  videoElement.innerHTML = `
+    <div class="video-preview">
+      <div class="thumbnail-row">
+        <img class="thumbnail" src="${video.Thumbnail}" />
+        <div class="video-time">9:30</div>
+      </div>
+      <div class="video-info-grid">
+        <div class="channel-picture">
+          <img class="profile-picture" src="imgs/profiles/unnamed.jpg" />
+        </div>
+        <div class="video-info">
+          <div class="video-title">
+            <span>${video.Title}</span>
+            <img src="imgs/Icons/Shorts video/menu-icon.svg">
+          </div>
+          <p class="video-author">${video.Channel}</p>
+          <p class="video-stats">${video.Views}</p>
+        </div>
+      </div>
+    </div>`;
+
+  videoElementsArray[index].replaceWith(videoElement);
 }
