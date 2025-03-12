@@ -1,7 +1,6 @@
 const like = document.querySelector(".icon.like");
 const dislike = document.querySelector(".icon.dislike");
 
-
 function toggleLike(element, child, opposite, oppositeChild) {
     return () => {
         const change = element.classList.toggle(child);
@@ -17,10 +16,15 @@ function toggleLike(element, child, opposite, oppositeChild) {
 
 const chek = localStorage.getItem("isLike")
 
-if (chek === "like") {
+if (chek === "liked") {
     like.classList.add("liked");
+    
+} else if (chek === "disliked") {
+    dislike.classList.add("disliked")
+    
 } else {
-    dislike.classList.add("disliked");
+    like.classList.remove("liked");
+    dislike.classList.remove("disliked")
 }
 
 like.addEventListener("click", toggleLike(like, "liked", dislike, "disliked"));
