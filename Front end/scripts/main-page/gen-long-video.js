@@ -2,6 +2,7 @@ import { Videos } from "../fetchVideo.js";
 export const videoElementsArray = [];
 
 export async function createPlaceholder() {
+  if (videoElementsArray.length > 0) return;
   Videos.forEach(() => {
     const placeHolder = document.createElement("div");
     placeHolder.classList.add("placeholder");
@@ -17,8 +18,6 @@ export async function createPlaceholder() {
 }
 
 export async function checkVisiblePart() {
-  console.log('hello');
-
   videoElementsArray.forEach((placeHolder, index) => {
     const rect = placeHolder.getBoundingClientRect();
     const videoHeight = rect.height;

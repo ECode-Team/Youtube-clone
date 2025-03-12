@@ -49,11 +49,13 @@ export function adjustLayout() {
 async function initialize() {
     await fetchVideo();
     await createPlaceholder();
-    await checkVisiblePart();
     await loadShorts();
     adjustLayout();
+    // We should check the visible parts after adjust layout. the placeholders are not yet positioned properly in the grid, they have created but they are not exist in the page because the responsive function havent called yet
+    await checkVisiblePart();
 }
 
 window.addEventListener('load', initialize);
 window.addEventListener('scroll', checkVisiblePart);
 window.addEventListener('resize', adjustLayout);
+window.addEventListener('resize', checkVisiblePart)
