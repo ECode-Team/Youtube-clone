@@ -1,0 +1,57 @@
+.box-share {
+  display: none;
+  position: fixed;
+  top: 48%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+  width: 510px;
+  height: 335px;
+  padding: 0px 20px;
+  margin: 24px 40px;
+  background: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  z-index: 1001;
+}
+
+.shadow-share {
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.23);
+}
+
+.box-share.active,
+.shadow-share.active {
+  display: block;
+}
+
+.index-container {
+  margin: 24px 0px;
+}
+
+.options-share {
+  display: flex;
+  width: 460px;
+  justify-content: space-between;
+
+}
+
+.option {
+
+}
+
+.option div {
+  width: 65px;
+  height: 65px;
+  margin: 5px;
+  border-radius: 50%;
+  background-color: rgb(218, 218, 218);
+  justify-content: center;
+}
+
+.option p {
+  
+}

@@ -23,14 +23,12 @@
   background: rgba(0, 0, 0, 0.5);
   /* Semi-transparent background */
   transition: opacity 0.3s ease;
-  opacity: 1;
   visibility: hidden;
   z-index: 1001;
   /* Ensure it's below the sidebar */
 }
 
 .cover-black.active {
-  opacity: 1;
   visibility: visible;
 }
 
