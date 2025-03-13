@@ -1,0 +1,17 @@
+/* placeholder */
+@keyframes loadingAnimation {
+  0% { background-color: #6b6b6b; }
+  50% { background-color: #373737; }
+  100% { background-color: #6b6b6b; }
+}
+.placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 500px;
+  height: 297px;
+  border-radius: 12px;
+  animation: loadingAnimation 1.5s infinite ease-in-out;
+}
