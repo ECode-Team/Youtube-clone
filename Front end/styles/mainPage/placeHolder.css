@@ -1,7 +1,17 @@
+:root {
+  --Pmain-color: #b2b2b2;
+  --Psecond-color: #7b7b7b;
+}
+
+.dark-mode {
+  --Pmain-color: #5c5c5c;
+  --Psecond-color: #2b2b2b;
+}
+
 @keyframes loadingAnimation {
-  0% { background-color: #6b6b6b; }
-  50% { background-color: #373737; }
-  100% { background-color: #6b6b6b; }
+  0% { background-color: var(--Pmain-color); }
+  50% { background-color: var(--Psecond-color); }
+  100% { background-color: var(--Pmain-color); }
 }
 .placeholder {
   display: flex;
