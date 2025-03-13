@@ -6,13 +6,6 @@ export async function createPlaceholder() {
   Videos.forEach(() => {
     const placeHolder = document.createElement("div");
     placeHolder.classList.add("placeholder");
-
-    placeHolder.innerHTML = `<div class="PHthumbnail"></div>
-    <div class="PHinfo">
-        <span class="PHprofile"></span>
-        <div class="PHtitle"></div>
-    </div>`;
-
     videoElementsArray.push(placeHolder);
   })
 }

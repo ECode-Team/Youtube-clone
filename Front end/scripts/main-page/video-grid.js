@@ -2,7 +2,7 @@ import { fetchVideo } from '../fetchVideo.js';
 import { videoElementsArray, createPlaceholder, checkVisiblePart } from './gen-long-video.js';
 import { shortElementsArray, loadShorts } from './gen-short-video.js';
 
-export function adjustLayout() {
+export async function adjustLayout() {
     // Access to html elements
     const [container, shortContainer] = [...document.querySelectorAll('.content-container, .Short-video-container')];
     const screenWith = document.querySelector('.content-container').getBoundingClientRect().width;
@@ -43,6 +43,8 @@ export function adjustLayout() {
             videoPerRow = 1;
         }
     });
+    // We should check the visible parts after adjust layout. the placeholders are not yet positioned properly in the grid, they have created but they are not exist in the page because the responsive function havent called yet
+    await checkVisiblePart();
 }
 
 // Wait for videos to be generate
@@ -51,8 +53,6 @@ async function initialize() {
     await createPlaceholder();
     await loadShorts();
     adjustLayout();
-    // We should check the visible parts after adjust layout. the placeholders are not yet positioned properly in the grid, they have created but they are not exist in the page because the responsive function havent called yet
-    await checkVisiblePart();
 }
 
 window.addEventListener('load', initialize);
