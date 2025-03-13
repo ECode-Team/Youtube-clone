@@ -11,7 +11,7 @@
   align-items: center;
   justify-content: center;
   max-width: 500px;
-  height: 297px;
+  height: 180px;
   border-radius: 12px;
   animation: loadingAnimation 1.5s infinite ease-in-out;
 }
