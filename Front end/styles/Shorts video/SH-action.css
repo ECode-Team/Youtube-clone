@@ -18,6 +18,23 @@
   --Zicon-color: 1;
 }
 
+.short-container {
+  margin: -70px 100px 0px 508px;
+  width: 475px;
+  height: 89vh;
+  display: flex;
+}
+.shortFrame {
+  width: 25vw;
+  margin-right: 12px;
+  border-radius: 12px;
+}
+.tools-bar {
+  display: flex;
+  align-items: end;
+  width: 85px;
+}
+
 .section-down {
   padding: 12px 12px 0px;
   display: flex;

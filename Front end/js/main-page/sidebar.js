@@ -5,9 +5,11 @@ const topic = document.querySelector(".topic-bar-container")
 const hr = document.querySelector(".hr-between")
 
 
-menuBtn.addEventListener("click", () => {
+menuBtn.addEventListener("click",async () => {
     sidebar.classList.toggle("closed")
     body.classList.toggle("closed")
     topic.classList.toggle("closed")
     hr.classList.toggle("closed")
+    const { adjustLayout } = await import("./video-grid.js");
+    adjustLayout();
 });
