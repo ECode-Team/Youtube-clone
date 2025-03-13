@@ -6,6 +6,12 @@ export async function createPlaceholder() {
   Videos.forEach(() => {
     const placeHolder = document.createElement("div");
     placeHolder.classList.add("placeholder");
+    
+    placeHolder.innerHTML = `<div class="PHthumbnail"></div>
+     <div class="PHinfo">
+         <span class="PHprofile"></span>
+         <div class="PHtitle"></div>
+     </div>`;
     videoElementsArray.push(placeHolder);
   })
 }
@@ -24,6 +30,7 @@ export async function checkVisiblePart() {
 
 async function loadVideos(index) {
   const video = Videos[index];
+
   const videoElement = document.createElement("a");
   videoElement.href = `video.html?video=${encodeURIComponent(video.link)}`;
 
@@ -48,5 +55,12 @@ async function loadVideos(index) {
       </div>
     </div>`;
 
-  videoElementsArray[index].replaceWith(videoElement);
+  const img = videoElement.querySelector(".thumbnail");
+  img.src = video.Thumbnail;
+
+  img.onload = function () {
+    img.style.display = 'block';
+    videoElementsArray[index].replaceWith(videoElement);
+    videoElementsArray[index] = videoElement;
+  }
 }

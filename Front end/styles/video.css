@@ -17,6 +17,7 @@
 .video-preview {
   cursor: pointer;
   max-width: 500px;
+  display: block;
 }
 
 .video-preview:hover {
@@ -29,24 +30,13 @@
   position: relative;
 }
 
-.thumbnail-row :hover {
-  margin-bottom: -0.3px;
-}
-
-@keyframes loadingAnimation {
-  0% { background-color: #6b6b6b; }
-  50% { background-color: #373737; }
-  100% { background-color: #6b6b6b; }
-}
 .thumbnail {
-  display: block;
   width: 100%;
   aspect-ratio: 16 / 9;
-  object-fit: cover;
-  animation: loadingAnimation 1.5s infinite ease-in-out;
   border-radius: 15px;
   transition: 0.2s;
 }
+
 .thumbnail:hover {
   border-radius: 3px;
   scale: 1.01;
@@ -106,10 +96,6 @@
 
 /* 1fr */
 @media (max-width: 700px) {
-  .video-grid {
-    grid-template-columns: 1fr;
-  }
-
   .sidebar-container {
     display: none;
   }
@@ -126,10 +112,6 @@
 
 /* 2fr */
 @media (min-width: 701px) and (max-width: 800px) {
-  .video-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
   .sidebar-container {
     display: none;
   }
@@ -145,10 +127,6 @@
 
 /* 2fr and delete sidebar */
 @media (min-width: 801px) and (max-width: 1100px) {
-  .video-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
   /* divv */
   .sidebar-container {
     padding: 0;
@@ -216,10 +194,6 @@
 
 /* 3fr nad short sidebar */
 @media (min-width: 1101px) and (max-width: 1300px) {
-  .video-grid {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
   /* divv */
   .sidebar-container {
     padding: 0;
@@ -287,14 +261,14 @@
 
 /* 3fr */
 @media (min-width: 1301px) and (max-width: 1600px) {
-  .video-grid {
-    grid-template-columns: 1fr 1fr 1fr;
+  .thumbnail{
+    min-width: 330px;
   }
 }
 
 /* 4fr */
 @media (min-width: 1601px) {
-  .video-grid {
-    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+  .thumbnail{
+    min-width: 320px;
   }
 }
