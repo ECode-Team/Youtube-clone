@@ -42,7 +42,7 @@ async function loadVideos(index) {
       </div>
       <div class="video-info-grid">
         <div class="channel-picture">
-          <img class="profile-picture" src="imgs/profiles/unnamed.jpg" />
+          <img class="profile-picture" src="${video.channelPicture}" />
         </div>
         <div class="video-info">
           <div class="video-title">
