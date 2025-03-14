@@ -1,5 +1,6 @@
 //Access to html classess
-const [profileBtn, themeToggle, backFlash, deviceTheme, deviceTick, darkTheme, darkTick, lightTheme, lightTick, profileMenu, appearance] = [...document.querySelectorAll('.profile-pic, .theme-toggle, .theme-back-flash, .theme-Mode.device, .theme-tick.device, .theme-Mode.dark, .theme-tick.dark, .theme-Mode.light, .theme-tick.light, .profile-menu, .menu-item-2.Appearance')];
+const [profileBtn, themeToggle, backFlash, deviceTheme, deviceTick, darkTheme, darkTick, lightTheme, lightTick, profileMenu, appearance] 
+= [...document.querySelectorAll('.profile-pic, .theme-toggle, .theme-back-flash, .theme-Mode.device, .theme-tick.device, .theme-Mode.dark, .theme-tick.dark, .theme-Mode.light, .theme-tick.light, .profile-menu, .menu-item-2.Appearance')];
 
 // Appearance window system
 profileBtn.addEventListener('click', () => {

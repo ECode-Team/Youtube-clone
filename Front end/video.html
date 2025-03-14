@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="styles/sidebar/Explore.css">
   <link rel="stylesheet" href="styles/sidebar/more-form.css">
   <link rel="stylesheet" href="styles/sidebar/sidebar.css" />
+  <link rel="stylesheet" href="styles/playback page/PB-share.css" />
 
   <!--Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -411,11 +412,37 @@
 
           <div class="action-buttons">
             <!-- Share -->
+           <div class="share-container">
             <button class="action share">
               <span class="icon"><img class="action-icons" src="imgs/Icons/playback page/share-icon.svg"></span>
               <span class="text">Share</span>
             </button>
+            
+             <!-- box -->
+            <div class="box-share">
+              <div class="index-container">
+                <div>
+                  <div class="title-share"><p>Share</p></div>
+                </div>
+                <div class="options-share">
+                  <div class="option"><div></div><p>...</p></div>
+                  <div class="option"><div></div><p>...</p></div>
+                  <div class="option"><div></div><p>...</p></div>
+                  <div class="option"><div></div><p>...</p></div>
+                  <div class="option"><div></div><p>...</p></div>
+                  <div class="option"><div></div><p>...</p></div>
+                </div>
+                <div class="index-address">
+                  <div class="index-url">
+                    <p>https://</p>
+                    <button class="copy-button">Copy</button>
+                  </div>
+                </div>
+                <hr>
 
+              </div>
+            </div>
+           </div>
             <!-- Download -->
             <button class="action download">
               <span class="icon"><img class="action-icons" src="imgs/Icons/playback page/Download-icon.svg"></span>
@@ -698,6 +725,7 @@
   <script src="js/playback-page/PB.like.js"></script>
   <script src="js/Header/profile-menu.js"></script>
   <script src="js/playback-page/PB-iframe.js"></script>
+  <script src="js/playback-page/PB-share.js"></script>
 </body>
 
 </html>
