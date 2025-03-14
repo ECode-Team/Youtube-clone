@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>youtube</title>
+  <title>YouTube</title>
   <!--Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,11 +13,12 @@
     rel="stylesheet" />
   <!-- Link css -->
   <link rel="stylesheet" href="styles/video.css" />
+  <link rel="stylesheet" href="styles/mainPage/placeHolder.css" />
   <link rel="stylesheet" href="styles/header/topic-bar.css" />
   <link rel="stylesheet" href="styles/sidebar/subescriptions.css">
   <link rel="stylesheet" href="styles/sidebar/Explore.css">
   <link rel="stylesheet" href="styles/sidebar/more-form.css">
-  <link rel="stylesheet" href="styles/Shorts-video/Short.css">
+  <link rel="stylesheet" href="styles/Shorts video/SH-video.css">
   <link rel="stylesheet" href="styles/general.css" />
   <link rel="stylesheet" href="styles/header/profile-menu.css" />
   <link rel="stylesheet" href="styles/header/navbar.css" />
@@ -36,9 +37,11 @@
       <button class="menu-btn">
         <img class="nav-icon" src="imgs/Icons/Header/menu.svg" alt="">
       </button>
-      <div class="youtube-logo">
-        <img class="nav-icon" src="imgs/Icons/Header/Youtube.svg" alt="">
-      </div>
+      <a href="index.html">
+        <div class="youtube-logo">
+          <img class="nav-icon" src="imgs/Icons/Header/Youtube.svg" alt="">
+        </div>
+      </a>
     </div>
     <!-- middle -->
     <div class="middle-section">
@@ -200,14 +203,18 @@
   <!-- sidebar -->
   <div class="sidebar-container" tabindex="0">
     <div class="section-section">
-      <div class="sidebar-links-home">
-        <img class="sidebar-icon" src="imgs/Icons/sidebar/Home.svg">
-        <div class="sidebar-text">Home</div>
-      </div>
-      <div class="sidebar-links">
-        <img class="sidebar-icon" src="imgs/Icons/sidebar/Shorts.svg">
-        <div class="sidebar-text">Shorts</div>
-      </div>
+      <a href="index.html">
+        <div class="sidebar-links-home">
+          <img class="sidebar-icon" src="imgs/Icons/sidebar/Home.svg">
+          <div class="sidebar-text">Home</div>
+        </div>
+      </a>
+      <a href="short.html">
+        <div class="sidebar-links">
+          <img class="sidebar-icon" src="imgs/Icons/sidebar/Shorts.svg">
+          <div class="sidebar-text">Shorts</div>
+        </div>
+      </a>
       <div class="sidebar-links">
         <img class="sidebar-icon" src="imgs/Icons/sidebar/Subscription.svg">
         <div class="sidebar-text">Subscriptions</div>
@@ -243,1119 +250,178 @@
       </div>
     </div>
 
-      <!-- for rispansive -->
-      <div class="for-delete">
-        
-        <hr />
+    <!-- for rispansive -->
+    <div class="for-delete">
 
-        <!-- subescriptions -->
-        <div class="section-section">
-          <h2 class="subscription-icon">Subscriptions</h2>
-          <ul class="subscription-list">
-            <li class="subscription-item">
-              <img src="imgs/profiles/car_profile.jpg" alt="Channel Icon">
-              <span>HitMakers</span><span class="live-icon-r">●</span>
-            </li>
-            <li class="subscription-item">
-              <img src="imgs/profiles/billie_profile.jpg" alt="Channel Icon">
-              <span>BillieEilish</span>
-            </li>
-            <li class="subscription-item">
-              <img src="imgs/profiles/channels3_profile.jpg" alt="Channel Icon">
-              <span>God Bless Bitcoin</span><span class="live-icon-b">●</span>
-            </li>
-            <li class="subscription-item">
-              <img src="imgs/profiles/channels4_profile.jpg" alt="Channel Icon">
-              <span>Rubik's</span>
-            </li>
-            <li class="subscription-item">
-              <img src="imgs/profiles/channels5_profile.jpg" alt="Channel Icon">
-              <span>Catur Newbie</span>
-            </li>
-            <li class="subscription-item">
-              <img src="imgs/profiles/channels6_profile.jpg" alt="Channel Icon">
-              <span>Essential Classics</span><span class="live-icon-b">●</span>
-            </li>
-            <li class="subscription-item">
-              <img src="imgs/profiles/channels9_profile.jpg" alt="Channel Icon">
-              <span>James Bartholomew</span><span class="live-icon-b">●</span>
-            </li>
-            <li class="subscription-item">
-              <img src="imgs/profiles/unnamed9.jpg" alt="Channel Icon">
-              <span>Top Gear</span>
-            </li>
-          </ul>
-          <div class="Show-more-icon"><img src="imgs/Icons/sidebar/Show-more.svg" alt=""> Show more</div>
-        </div>
+      <hr />
 
-        <hr />
-
-        <!-- Explore -->
-        <div class="section-section">
-          <h2 class="Explore">Explore</h2>
-          <div class="Explore-links">
-            <img class="Explore-icon" src="imgs/Icons/sidebar/Explore/Trending.svg">
-            <div class="Explore-text">Trending</div>
-          </div>
-          <div class="Explore-links">
-            <img class="Explore-icon" src="imgs/Icons/sidebar/Explore/Musics.svg">
-            <div class="Explore-text">Music</div>
-          </div>
-          <div class="Explore-links">
-            <img class="Explore-icon" src="imgs/Icons/sidebar/Explore/Movie.svg">
-            <div class="Explore-text">Movies & TY</div>
-          </div>
-          <div class="Explore-links">
-            <img class="Explore-icon" src="imgs/Icons/sidebar/Explore/Movie.svg">
-            <div class="Explore-text">Live</div>
-          </div>
-          <div class="Explore-links">
-            <img class="Explore-icon" src="imgs/Icons/sidebar/Explore/Gaming.svg">
-            <div class="Explore-text">Gaming</div>
-          </div>
-          <div class="Explore-links">
-            <img class="Explore-icon" src="imgs/Icons/sidebar/Explore/News.svg">
-            <div class="Explore-text">News</div>
-          </div>
-          <div class="Explore-links">
-            <img class="Explore-icon" src="imgs/Icons/sidebar/Explore/Sports.svg" alt="">
-            <div class="Explore-text">Sports</div>
-          </div>
-          <div class="Explore-links">
-            <img class="Explore-icon" src="imgs/Icons/sidebar/Explore/Learn.svg">
-            <div class="Explore-text">Learning</div>
-          </div>
-          <div class="Explore-links">
-            <img class="Explore-icon" src="imgs/Icons/sidebar/Explore/Fashion.svg">
-            <div class="Explore-text">Fashion & Beauty</div>
-          </div>
-          <div class="Explore-links">
-            <img class="Explore-icon" src="imgs/Icons/sidebar/Explore/Podcats.svg">
-            <div class="Explore-text">Podcasts</div>
-          </div>
-        </div>
-
-        <hr />
-
-        <!-- More form youtube -->
-        <div class="section-section">
-          <h2 class="more-form">More form Youtube</h2>
-          <div class="more-form-link">
-            <img src="imgs/Icons/sidebar/more-form/youtube-premium.svg" />
-            <div>YouTbe Premium</div>
-          </div>
-          <div class="more-form-link">
-            <img src="imgs/Icons/sidebar/more-form/youtube-studio.svg" />
-            <div>YouTbe Studio</div>
-          </div>
-          <div class="more-form-link">
-            <img src="imgs/Icons/sidebar/more-form/youtube-music.svg" />
-            <div>YouTbe Music</div>
-          </div>
-          <div class="more-form-link">
-            <img src="imgs/Icons/sidebar/more-form/youtube-kids.svg" />
-            <div>YouTube Kids</div>
-          </div>
-        </div>
-
-        <hr />
-
-        <div class="section-section">
-          <div class="more-form-link">
-            <img class="More-icons" src="imgs/Icons/sidebar/Explore/Setting.svg">
-            <div>Settings</div>
-          </div>
-          <div class="more-form-link">
-            <img class="More-icons" src="imgs/Icons/sidebar/Explore/Report.svg">
-            <div>Report history</div>
-          </div>
-          <div class="more-form-link">
-            <img class="More-icons" src="imgs/Icons/sidebar/Explore/Help.svg">
-            <div>Help</div>
-          </div>
-          <div class="more-form-link">
-            <img class="More-icons" src="imgs/Icons/sidebar/Explore/Feedback.svg">
-            <div>Send feedback</div>
-          </div>
-        </div>
-
-        <hr />
-
-        <div class="about">
-          <div>About Press Copyrigh tContact us Creators Advertise Developers</div>
-          <div>Terms Privacy Policy & Safety How YouTube worksTest new features</div>
-          <div>© 2025 Google LLC</div>
-        </div>
-
+      <!-- subescriptions -->
+      <div class="section-section">
+        <h2 class="subscription-icon">Subscriptions</h2>
+        <ul class="subscription-list">
+          <li class="subscription-item">
+            <img src="imgs/profiles/car_profile.jpg" alt="Channel Icon">
+            <span>HitMakers</span><span class="live-icon-r">●</span>
+          </li>
+          <li class="subscription-item">
+            <img src="imgs/profiles/billie_profile.jpg" alt="Channel Icon">
+            <span>BillieEilish</span>
+          </li>
+          <li class="subscription-item">
+            <img src="imgs/profiles/channels3_profile.jpg" alt="Channel Icon">
+            <span>God Bless Bitcoin</span><span class="live-icon-b">●</span>
+          </li>
+          <li class="subscription-item">
+            <img src="imgs/profiles/channels4_profile.jpg" alt="Channel Icon">
+            <span>Rubik's</span>
+          </li>
+          <li class="subscription-item">
+            <img src="imgs/profiles/channels5_profile.jpg" alt="Channel Icon">
+            <span>Catur Newbie</span>
+          </li>
+          <li class="subscription-item">
+            <img src="imgs/profiles/channels6_profile.jpg" alt="Channel Icon">
+            <span>Essential Classics</span><span class="live-icon-b">●</span>
+          </li>
+          <li class="subscription-item">
+            <img src="imgs/profiles/channels9_profile.jpg" alt="Channel Icon">
+            <span>James Bartholomew</span><span class="live-icon-b">●</span>
+          </li>
+          <li class="subscription-item">
+            <img src="imgs/profiles/unnamed9.jpg" alt="Channel Icon">
+            <span>Top Gear</span>
+          </li>
+        </ul>
+        <div class="Show-more-icon"><img src="imgs/Icons/sidebar/Show-more.svg" alt=""> Show more</div>
       </div>
-    </div>
-  </div>
 
-  <!-- videos -->
-  <div class="video-grid">
-    <!-- video 01 -->
+      <hr />
 
-    <!--video preview-->
-    <a href="video.html">
-      <div class="video-preview">
-        <!--thumbnail-->
-        <div class="thumbnail-row">
-          <img class="thumbnail" src="imgs/thumbnails/hq720.avif" />
-          <div class="video-time">9:30</div>
+      <!-- Explore -->
+      <div class="section-section">
+        <h2 class="Explore">Explore</h2>
+        <div class="Explore-links">
+          <img class="Explore-icon" src="imgs/Icons/sidebar/Explore/Trending.svg">
+          <div class="Explore-text">Trending</div>
         </div>
-
-        <!--Video Info-->
-        <div class="video-info-grid">
-          <div class="channel-picture">
-            <img class="profile-picture" src="imgs/profiles/unnamed.jpg" />
-          </div>
-          <div class="video-info">
-            <div class="video-title">
-              <span>Rubik's cube From 1*1 To 10*10 Speed Solving</span>
-              <img src="imgs/Icons/Shorts video/menu-icon.svg">
-            </div>
-            <p class="video-author">CUBASTIC</p>
-            <p class="video-stats">1.4M views &#183; 9 month ago</p>
-          </div>
+        <div class="Explore-links">
+          <img class="Explore-icon" src="imgs/Icons/sidebar/Explore/Musics.svg">
+          <div class="Explore-text">Music</div>
+        </div>
+        <div class="Explore-links">
+          <img class="Explore-icon" src="imgs/Icons/sidebar/Explore/Movie.svg">
+          <div class="Explore-text">Movies & TY</div>
+        </div>
+        <div class="Explore-links">
+          <img class="Explore-icon" src="imgs/Icons/sidebar/Explore/Movie.svg">
+          <div class="Explore-text">Live</div>
+        </div>
+        <div class="Explore-links">
+          <img class="Explore-icon" src="imgs/Icons/sidebar/Explore/Gaming.svg">
+          <div class="Explore-text">Gaming</div>
+        </div>
+        <div class="Explore-links">
+          <img class="Explore-icon" src="imgs/Icons/sidebar/Explore/News.svg">
+          <div class="Explore-text">News</div>
+        </div>
+        <div class="Explore-links">
+          <img class="Explore-icon" src="imgs/Icons/sidebar/Explore/Sports.svg" alt="">
+          <div class="Explore-text">Sports</div>
+        </div>
+        <div class="Explore-links">
+          <img class="Explore-icon" src="imgs/Icons/sidebar/Explore/Learn.svg">
+          <div class="Explore-text">Learning</div>
+        </div>
+        <div class="Explore-links">
+          <img class="Explore-icon" src="imgs/Icons/sidebar/Explore/Fashion.svg">
+          <div class="Explore-text">Fashion & Beauty</div>
+        </div>
+        <div class="Explore-links">
+          <img class="Explore-icon" src="imgs/Icons/sidebar/Explore/Podcats.svg">
+          <div class="Explore-text">Podcasts</div>
         </div>
       </div>
-    </a>
 
-    <!-- video 02 -->
+      <hr />
 
-    <!--video preview-->
-    <a href="video.html">
-      <div class="video-preview">
-        <!--thumbnail-->
-        <div class="thumbnail-row">
-          <img class="thumbnail" src="imgs/thumbnails/hq724.avif" />
-          <div class="video-time">1:29:12</div>
+      <!-- More form youtube -->
+      <div class="section-section">
+        <h2 class="more-form">More form Youtube</h2>
+        <div class="more-form-link">
+          <img src="imgs/Icons/sidebar/more-form/youtube-premium.svg" />
+          <div>YouTbe Premium</div>
         </div>
-
-        <!--Video Info-->
-        <div class="video-info-grid">
-          <div class="channel-picture">
-            <img class="profile-picture" src="imgs/profiles/channels3_profile.jpg" />
-          </div>
-
-          <div class="video-info">
-            <div class="video-title">
-              <span>God Bless Bitcoin | FULL MOVIE</span>
-              <img src="imgs/Icons/Shorts video/menu-icon.svg">
-            </div>
-            <p class="video-author">God Bless Bitcoin</p>
-            <p class="video-stats">350K views &#183; 2 weeks ago</p>
-          </div>
+        <div class="more-form-link">
+          <img src="imgs/Icons/sidebar/more-form/youtube-studio.svg" />
+          <div>YouTbe Studio</div>
+        </div>
+        <div class="more-form-link">
+          <img src="imgs/Icons/sidebar/more-form/youtube-music.svg" />
+          <div>YouTbe Music</div>
+        </div>
+        <div class="more-form-link">
+          <img src="imgs/Icons/sidebar/more-form/youtube-kids.svg" />
+          <div>YouTube Kids</div>
         </div>
       </div>
-    </a>
 
-    <!-- video 03 -->
+      <hr />
 
-    <!--video preview-->
-    <a href="video.html">
-      <div class="video-preview">
-        <!--thumbnail-->
-        <div class="thumbnail-row">
-          <img class="thumbnail" src="Imgs/thumbnails/bitcoin.jpg">
-          <div class="video-time">12:34</div>
+      <div class="section-section">
+        <div class="more-form-link">
+          <img class="More-icons" src="imgs/Icons/sidebar/Explore/Setting.svg">
+          <div>Settings</div>
         </div>
-
-        <!--Video Info-->
-        <div class="video-info-grid">
-          <div class="channel-picture">
-            <img class="profile-picture" src="imgs/profiles/Coingeco.jpg">
-          </div>
-          <div class="video-info">
-            <div class="video-title">
-              <span>What Happens When ALL 21 Million Bitcoin Are Mined?</span>
-              <img src="imgs/Icons/Shorts video/menu-icon.svg">
-            </div>
-            <p class="video-author">
-              CoinGecko
-            </p>
-            <p class="video-stats">
-              1M veiws &#183; 1 year ago
-            </p>
-          </div>
+        <div class="more-form-link">
+          <img class="More-icons" src="imgs/Icons/sidebar/Explore/Report.svg">
+          <div>Report history</div>
+        </div>
+        <div class="more-form-link">
+          <img class="More-icons" src="imgs/Icons/sidebar/Explore/Help.svg">
+          <div>Help</div>
+        </div>
+        <div class="more-form-link">
+          <img class="More-icons" src="imgs/Icons/sidebar/Explore/Feedback.svg">
+          <div>Send feedback</div>
         </div>
       </div>
-    </a>
 
-    <!-- video 04 -->
+      <hr />
 
-    <!--video preview-->
-    <a href="video.html">
-      <div class="video-preview">
-
-        <!--thumbnail-->
-        <div class="thumbnail-row">
-          <img class="thumbnail" src="Imgs/thumbnails/dodge.jpg">
-          <div class="video-time">12:34</div>
-        </div>
-
-        <!--Video Info-->
-        <div class="video-info-grid">
-          <div class="channel-picture">
-            <img class="profile-picture" src="imgs/profiles/car_profile.jpg">
-          </div>
-          <div class="video-info">
-            <div class="video-title">
-              <span>Dodge Challenger Hellcat SRT Redeye Widebody | The Ultimate Muscle Car</span>
-              <img src="imgs/Icons/Shorts video/menu-icon.svg">
-            </div>
-            <p class="video-author">
-              HitMakers
-            </p>
-            <p class="video-stats">
-              1M veiws &#183; 1 year ago
-            </p>
-          </div>
-        </div>
-      </div>
-    </a>
-  </div>
-
-  <!-- Short video -->
-  <div class="Short-video-container">
-
-    <!-- navbar section -->
-    <div class="navbar-short-video">
-      <div class="Short-icon">
-        <img src="imgs/Icons/Shorts video/Short-video-icon.svg" alt="">
-        <span>Shorts</span>
-      </div>
-      <div class="button-mnue"><button><img src="imgs/Icons/Shorts video/menu-icon.svg" alt=""></button></div>
-    </div>
-
-
-    <div class="Short-video-section">
-      <!-- short-video-box -->
-      <!-- 01 -->
-      <div class="short-video-box">
-        <div>
-          <div class="short-thumbnail">
-            <img src="imgs/Short thumbnails/oar1.avif" alt="">
-          </div>
-          <div class="short-video-info">
-            <div class="short-video-title">
-              <span class="short-video-title">How to make 10000$ in 1 hour</span>
-              <img src="imgs/Icons/Shorts video/menu-icon.svg">
-            </div>
-            <p class="short-video-stats">1.4M views</p>
-          </div>
-        </div>
-      </div>
-      <!-- 02 -->
-      <div class="short-video-box">
-        <div>
-          <div class="short-thumbnail">
-            <img src="imgs/Short thumbnails/oar2.avif" alt="">
-          </div>
-          <div class="short-video-info">
-            <div class="short-video-title">
-              <span class="short-video-title">Wait 🥵 Sound Of Dodge Challenger 🔥 Supercharged‼️</span>
-              <img src="imgs/Icons/Shorts video/menu-icon.svg">
-            </div>
-            <p class="short-video-stats">1.5M views</p>
-          </div>
-        </div>
-      </div>
-      <!-- 03 -->
-      <div class="short-video-box">
-        <div>
-          <div class="short-thumbnail">
-            <img src="imgs/Short thumbnails/oar3.avif" alt="">
-          </div>
-          <div class="short-video-info">
-            <div class="short-video-title">
-              <span class="short-video-title">How Much Can I Make In A Day Trading Crypto?</span>
-              <img src="imgs/Icons/Shorts video/menu-icon.svg">
-            </div>
-            <p class="short-video-stats">420K views</p>
-          </div>
-        </div>
-      </div>
-      <!-- 04-->
-      <div class="short-video-box">
-        <div>
-          <div class="short-thumbnail">
-            <img src="imgs/Short thumbnails/oar4.avif" alt="">
-          </div>
-          <div class="short-video-info">
-            <div class="short-video-title">
-              <span class="short-video-title">Lamborghini Aventador SVJ X G63 AMG</span>
-              <img src="imgs/Icons/Shorts video/menu-icon.svg">
-            </div>
-            <p class="short-video-stats">47M views</p>
-          </div>
-        </div>
-      </div>
-      <!-- 05 -->
-      <div class="short-video-box">
-        <div>
-          <div class="short-thumbnail">
-            <img src="imgs/Short thumbnails/oar5.avif" alt="">
-          </div>
-          <div class="short-video-info">
-            <div class="short-video-title">
-              <span class="short-video-title">The Mercedes AVTR is Insane 😱🔥 #shorts</span>
-              <img src="imgs/Icons/Shorts video/menu-icon.svg">
-            </div>
-            <p class="short-video-stats">135M views</p>
-          </div>
-        </div>
-      </div>
-      <!-- 06 -->
-      <div class="short-video-box">
-        <div>
-          <div class="short-thumbnail">
-            <img src="imgs/Short thumbnails/oar6.avif" alt="">
-          </div>
-          <div class="short-video-info">
-            <div class="short-video-title">
-              <span class="short-video-title">میزان محبوبیت زبان های برنامه نویسی بین سال های 2022 تا 2023</span>
-              <img src="imgs/Icons/Shorts video/menu-icon.svg">
-            </div>
-            <p class="short-video-stats">1.5M views</p>
-          </div>
-        </div>
+      <div class="about">
+        <div>About Press Copyrigh tContact us Creators Advertise Developers</div>
+        <div>Terms Privacy Policy & Safety How YouTube worksTest new features</div>
+        <div>© 2025 Google LLC</div>
       </div>
 
     </div>
   </div>
-
-  <!-- videos -->
-  <div class="video-grid">
-    <!-- video 05 -->
-
-    <!--video preview-->
-    <a href="video.html">
-      <div class="video-preview">
-
-        <!--thumbnail-->
-        <div class="thumbnail-row">
-          <img class="thumbnail" src="Imgs/thumbnails/hq7290.avif">
-          <div class="video-time">01:14:20</div>
-        </div>
-
-        <!--Video Info-->
-        <div class="video-info-grid">
-          <div class="channel-picture">
-            <img class="profile-picture" src="Imgs/profiles/unnamed9.jpg">
-          </div>
-          <div class="video-info">
-            <div class="video-title">
-              <span>Ken Block Drifts London EXTENDED Director's Cut | Top Gear | BBC</span>
-              <img src="imgs/Icons/Shorts video/menu-icon.svg">
-            </div>
-            <p class="video-author">
-              Top Gear
-            </p>
-            <p class="video-stats">
-              83M veiws &#183; 8 years ago
-            </p>
-          </div>
-        </div>
-      </div>
-    </a>
-
-
-    <!-- video 06 -->
-
-    <!--video preview-->
-    <a href="video.html">
-      <div class="video-preview">
-        <!--thumbnail-->
-        <div class="thumbnail-row">
-          <img class="thumbnail" src="imgs/thumbnails//097f3405526b10a2e39b3941dd0d4125.png" />
-          <div class="video-time">16:35</div>
-        </div>
-
-        <!--Video Info-->
-        <div class="video-info-grid">
-          <div class="channel-picture">
-            <img class="profile-picture" src="Imgs/profiles/Untitled-1.psd6.png" />
-          </div>
-          <div class="video-info">
-            <div class="video-title">
-              <span>The best YouTubers in Iran | واقعا بهترین یوتوبر های ایرانن ,نمیدونم؟</span>
-              <img src="imgs/Icons/Shorts video/menu-icon.svg">
-            </div>
-            <p class="video-author">pico &#x2713;</p>
-            <p class="video-stats">100B views &#183; 1 day ago</p>
-          </div>
-        </div>
-      </div>
-    </a>
-
-    <!-- video 07 -->
-
-    <!--video preview-->
-    <a href="video.html">
-      <div class="video-preview">
-
-        <!--thumbnail-->
-        <div class="thumbnail-row">
-          <img class="thumbnail" src="Imgs/thumbnails/cold walet.jpg">
-          <div class="video-time">22:04</div>
-        </div>
-
-        <!--Video Info-->
-        <div class="video-info-grid">
-          <div class="channel-picture">
-            <img class="profile-picture" src="Imgs/profiles/Coingeco.jpg">
-          </div>
-          <div class="video-info">
-            <div class="video-title">
-              <span>Hot wallet or Cold wallet which one is better?</span>
-              <img src="imgs/Icons/Shorts video/menu-icon.svg">
-            </div>
-            <p class="video-author">
-              CoinGecko
-            </p>
-            <p class="video-stats">
-              824K veiws &#183; 8 months ago
-            </p>
-          </div>
-        </div>
-      </div>
-    </a>
-
-    <!-- video 08 -->
-
-    <!--video preview-->
-    <a href="video.html">
-      <div class="video-preview">
-        <!--thumbnail-->
-        <div class="thumbnail-row">
-          <img class="thumbnail" src="imgs/thumbnails/hq722.avif" />
-          <div class="video-time">10:03</div>
-        </div>
-
-        <!--Video Info-->
-        <div class="video-info-grid">
-          <div class="channel-picture">
-            <img class="profile-picture" src="imgs/profiles/unnamed.jpg" />
-          </div>
-          <div class="video-info">
-            <div class="video-title">
-              <span>This robot solve a Rubik's cube in world record time</span>
-              <img src="imgs/Icons/Shorts video/menu-icon.svg">
-            </div>
-            <p class="video-author">CUBASTIC</p>
-            <p class="video-stats">19M views &#183; 4 years ago</p>
-          </div>
-        </div>
-      </div>
-    </a>
   </div>
 
-  <!-- Short video -->
-  <div class="Short-video-container">
-
-    <!-- navbar section -->
-    <div class="navbar-short-video">
-      <div class="Short-icon">
-        <img src="imgs/Icons/Shorts video/Short-video-icon.svg" alt="">
-        <span>Shorts</span>
-      </div>
-      <div class="button-mnue"><button><img src="imgs/Icons/Shorts video/menu-icon.svg" alt=""></button></div>
+  <div class="content-container">
+    <div class="video-grid">
     </div>
 
+    <div class="Short-video-container">
 
-    <div class="Short-video-section">
+      <!-- navbar section -->
+      <div class="navbar-short-video">
+        <div class="Short-icon">
+          <img src="imgs/Icons/Shorts video/Short-video-icon.svg" alt="">
+          <span>Shorts</span>
+        </div>
+        <div class="button-mnue"><button><img src="imgs/Icons/Shorts video/menu-icon.svg" alt=""></button></div>
+      </div>
 
-      <!-- short-video-box -->
-      <!-- 01 -->
-      <div class="short-video-box">
-        <div>
-          <div class="short-thumbnail">
-            <img src="imgs/Short thumbnails/oar7.avif" alt="">
-          </div>
-          <div class="short-video-info">
-            <div class="short-video-title">
-              <span class="short-video-title">cbum posing 🤯😱 #shorts #fitness #viral #bodybuilding #cbum</span>
-              <img src="imgs/Icons/Shorts video/menu-icon.svg">
-            </div>
-            <p class="short-video-stats">53K views</p>
-          </div>
-        </div>
-      </div>
-      <!-- 02 -->
-      <div class="short-video-box">
-        <div>
-          <div class="short-thumbnail">
-            <img src="imgs/Short thumbnails/oardefault.webp" alt="">
-          </div>
-          <div class="short-video-info">
-            <div class="short-video-title">
-              <span class="short-video-title">Lamborghini, Bugatti, Audi, Mercedes, which one is your favorite</span>
-              <img src="imgs/Icons/Shorts video/menu-icon.svg">
-            </div>
-            <p class="short-video-stats">25M views</p>
-          </div>
-        </div>
-      </div>
-      <!-- 03 -->
-      <div class="short-video-box">
-        <div>
-          <div class="short-thumbnail">
-            <img src="imgs/Short thumbnails/oardefault1.webp" alt="">
-          </div>
-          <div class="short-video-info">
-            <div class="short-video-title">
-              <span class="short-video-title">dodge challenger sound 😱😨 #dodgechallenger</span>
-              <img src="imgs/Icons/Shorts video/menu-icon.svg">
-            </div>
-            <p class="short-video-stats">72M views</p>
-          </div>
-        </div>
-      </div>
-      <!-- 04-->
-      <div class="short-video-box">
-        <div>
-          <div class="short-thumbnail">
-            <img src="imgs/Short thumbnails/hq120.webp" alt="">
-          </div>
-          <div class="short-video-info">
-            <div class="short-video-title">
-              <span class="short-video-title">@houston.crosta new STO is 🔥🔥</span>
-              <img src="imgs/Icons/Shorts video/menu-icon.svg">
-            </div>
-            <p class="short-video-stats">47M views</p>
-          </div>
-        </div>
-      </div>
-      <!-- 05 -->
-      <div class="short-video-box">
-        <div>
-          <div class="short-thumbnail">
-            <img src="imgs/Short thumbnails/oar8.avif" alt="">
-          </div>
-          <div class="short-video-info">
-            <div class="short-video-title">
-              <span class="short-video-title">Chris Bumstead Legendary Posing #chrisbumstead</span>
-              <img src="imgs/Icons/Shorts video/menu-icon.svg">
-            </div>
-            <p class="short-video-stats">9.1M views</p>
-          </div>
-        </div>
-      </div>
-      <!-- 06 -->
-      <div class="short-video-box">
-        <div>
-          <div class="short-thumbnail">
-            <img src="imgs/Short thumbnails/oar2.webp" alt="">
-          </div>
-          <div class="short-video-info">
-            <div class="short-video-title">
-              <span class="short-video-title">میزان محبوبیت زبان های برنامه نویسی بین سال های 2022 تا 2023</span>
-              <img src="imgs/Icons/Shorts video/menu-icon.svg">
-            </div>
-            <p class="short-video-stats">1.5M views</p>
-          </div>
-        </div>
+      <div class="Short-video-section">
       </div>
     </div>
+
   </div>
 
-  <!-- videos -->
-  <div class="video-grid">
-    <!-- video 09 -->
-
-    <!--video preview-->
-    <a href="video.html">
-      <div class="video-preview">
-        <!--thumbnail-->
-        <div class="thumbnail-row">
-          <img class="thumbnail" src="imgs/thumbnails/hqdefault1.avif" />
-          <div class="video-time">17:20</div>
-        </div>
-
-        <!--Video Info-->
-        <div class="video-info-grid">
-          <div class="channel-picture">
-            <img class="profile-picture" src="imgs/profiles/channels5_profile.jpg" />
-          </div>
-          <div class="video-info">
-            <div class="video-title">
-              <span>Magnus defends while attacking Alireza Firouzja | Armageddon Game
-                Norway Chess</span>
-              <img src="imgs/Icons/Shorts video/menu-icon.svg">
-            </div>
-            <p class="video-author">Catur Newbie</p>
-            <p class="video-stats">100k views &#183; 1 month ago</p>
-          </div>
-        </div>
-      </div>
-    </a>
-
-    <!-- video 010 -->
-
-    <!--video preview-->
-    <a href="video.html">
-      <div class="video-preview">
-        <!--thumbnail-->
-        <div class="thumbnail-row">
-          <img class="thumbnail" src="imgs/thumbnails/hq723.avif" />
-          <div class="video-time">8:23</div>
-        </div>
-
-        <!--Video Info-->
-        <div class="video-info-grid">
-          <div class="channel-picture">
-            <img class="profile-picture" src="imgs/profiles/unnamed2.jpg" />
-          </div>
-          <div class="video-info">
-            <div class="video-title">
-              <span>$1 vs $10,000,000 Chess Sets!</span>
-              <img src="imgs/Icons/Shorts video/menu-icon.svg">
-            </div>
-            <p class="video-author">RookMoves Chess</p>
-            <p class="video-stats">1.5M views &#183; 1years ago</p>
-          </div>
-        </div>
-      </div>
-    </a>
-
-    <!-- video 011 -->
-
-    <!--video preview-->
-    <a href="video.html">
-      <div class="video-preview">
-
-        <!--thumbnail-->
-        <div class="thumbnail-row">
-          <img class="thumbnail" src="Imgs/thumbnails/got talent.jpg">
-          <div class="video-time">8:10</div>
-        </div>
-
-        <!--Video Info-->
-        <div class="video-info-grid">
-          <div class="channel-picture">
-            <img class="profile-picture" src="Imgs/profiles/talent.jpg">
-          </div>
-          <div class="video-info">
-            <div class="video-title">
-              <span>This boy sang the song better than the singer himself</span>
-              <img src="imgs/Icons/Shorts video/menu-icon.svg">
-            </div>
-            <p class="video-author">
-              GotTallent
-            </p>
-            <p class="video-stats">
-              24M veiws &#183; 3 year ago
-            </p>
-          </div>
-        </div>
-      </div>
-    </a>
-
-    <!-- video 012 -->
-
-    <!--video preview-->
-    <a href="video.html">
-      <div class="video-preview">
-
-        <!--thumbnail-->
-        <div class="thumbnail-row">
-          <img class="thumbnail" src="Imgs/thumbnails/iterstellar.jpg">
-          <div class="video-time">12:58</div>
-        </div>
-
-        <!--Video Info-->
-        <div class="video-info-grid">
-          <div class="channel-picture">
-            <img class="profile-picture" src="Imgs/profiles/Game.jpg">
-          </div>
-          <div class="video-info">
-            <div class="video-title">
-              <span>This boy sang the song better than the singer himself</span>
-              <img src="imgs/Icons/Shorts video/menu-icon.svg">
-            </div>
-            <p class="video-author">
-              GamerANH
-            </p>
-            <p class="video-stats">
-              900K veiws &#183; 7 months ago
-            </p>
-          </div>
-        </div>
-      </div>
-    </a>
-
-    <!-- video 013 -->
-
-    <!--video preview-->
-    <a href="video.html">
-      <div class="video-preview">
-
-        <!--thumbnail-->
-        <div class="thumbnail-row">
-          <img class="thumbnail" src="Imgs/thumbnails/last of us 2.jpg">
-          <div class="video-time">12:31:26</div>
-        </div>
-
-        <!--Video Info-->
-        <div class="video-info-grid">
-          <div class="channel-picture">
-            <img class="profile-picture" src="Imgs/profiles/shirrako.jpg">
-          </div>
-          <div class="video-info">
-            <div class="video-title">
-              <span>Last of us part 2 full gameplay with all cutscenes</span>
-              <img src="imgs/Icons/Shorts video/menu-icon.svg">
-            </div>
-            <p class="video-author">
-              GamerANH
-            </p>
-            <p class="video-stats">
-              2M veiws &#183; 4 months ago
-            </p>
-          </div>
-        </div>
-      </div>
-    </a>
-
-    <!-- video 014 -->
-
-    <!--video preview-->
-    <a href="video.html">
-      <div class="video-preview">
-
-        <!--thumbnail-->
-        <div class="thumbnail-row">
-          <img class="thumbnail" src="Imgs/thumbnails/last of us.jpg">
-          <div class="video-time">28:40</div>
-        </div>
-
-        <!--Video Info-->
-        <div class="video-info-grid">
-          <div class="channel-picture">
-            <img class="profile-picture" src="Imgs/profiles/Game.jpg">
-          </div>
-          <div class="video-info">
-            <div class="video-title">
-              <span>Last of us part 2 last chapter gameplay. Lets finish it!</span>
-              <img src="imgs/Icons/Shorts video/menu-icon.svg">
-            </div>
-            <p class="video-author">
-              GamerANH
-            </p>
-            <p class="video-stats">
-              600K veiws &#183; 2 months ago
-            </p>
-          </div>
-        </div>
-      </div>
-    </a>
-
-    <!-- video 015 -->
-
-    <!--video preview-->
-    <a href="video.html">
-      <div class="video-preview">
-
-        <!--thumbnail-->
-        <div class="thumbnail-row">
-          <img class="thumbnail" src="Imgs/thumbnails/metamask.jpg">
-          <div class="video-time">10:20</div>
-        </div>
-
-        <!--Video Info-->
-        <div class="video-info-grid">
-          <div class="channel-picture">
-            <img class="profile-picture" src="Imgs/profiles/Coingeco.jpg">
-          </div>
-          <div class="video-info">
-            <div class="video-title">
-              <span>Complete guid to metamask and tutorial to install and use it</span>
-              <img src="imgs/Icons/Shorts video/menu-icon.svg">
-            </div>
-            <p class="video-author">
-              CoinGecko
-            </p>
-            <p class="video-stats">
-              435K veiws &#183; 4 months ago
-            </p>
-          </div>
-        </div>
-      </div>
-    </a>
-
-    <!-- video 016 -->
-
-    <!--video preview-->
-    <a href="video.html">
-      <div class="video-preview">
-
-        <!--thumbnail-->
-        <div class="thumbnail-row">
-          <img class="thumbnail" src="imgs/thumbnails/backend.jpg">
-          <div class="video-time">16:33</div>
-        </div>
-
-        <!--Video Info-->
-        <div class="video-info-grid">
-          <div class="channel-picture">
-            <img class="profile-picture" src="Imgs/profiles/simp dev.jpg">
-          </div>
-          <div class="video-info">
-            <div class="video-title">
-              <span>What is backend?</span>
-              <img src="imgs/Icons/Shorts video/menu-icon.svg">
-            </div>
-            <p class="video-author">
-              supresimpdev
-            </p>
-            <p class="video-stats">
-              1.9M veiws &#183; 6 months ago
-            </p>
-          </div>
-        </div>
-      </div>
-    </a>
-
-    <!-- video 017 -->
-
-    <!--video preview-->
-    <a href="video.html">
-      <div class="video-preview">
-
-        <!--thumbnail-->
-        <div class="thumbnail-row">
-          <img class="thumbnail" src="Imgs/thumbnails/singer.jpg">
-          <div class="video-time">21:04</div>
-        </div>
-
-        <!--Video Info-->
-        <div class="video-info-grid">
-          <div class="channel-picture">
-            <img class="profile-picture" src="Imgs/profiles/singer.jpg">
-          </div>
-          <div class="video-info">
-            <div class="video-title">
-              <span>Is Fairy Tail the best Eurovision song?</span>
-              <img src="imgs/Icons/Shorts video/menu-icon.svg">
-            </div>
-            <p class="video-author">
-              AlexanderRybak
-            </p>
-            <p class="video-stats">
-              12M veiws &#183; 4 year ago
-            </p>
-          </div>
-        </div>
-      </div>
-    </a>
-
-    <!-- video 018 -->
-
-    <!--video preview-->
-    <a href="video.html">
-      <div class="video-preview">
-
-        <!--thumbnail-->
-        <div class="thumbnail-row">
-          <img class="thumbnail" src="Imgs/thumbnails/billie.jpg">
-          <div class="video-time">12:34</div>
-        </div>
-
-        <!--Video Info-->
-        <div class="video-info-grid">
-          <div class="channel-picture">
-            <img class="profile-picture" src="imgs/profiles/billie_profile.jpg">
-          </div>
-          <div class="video-info">
-            <div class="video-title">
-              <span>Billie Eilish - BIRDS OF A FEATHER (Official Music Video)</span>
-              <img src="imgs/Icons/Shorts video/menu-icon.svg">
-            </div>
-            <p class="video-author">
-              BillieEilish
-            </p>
-            <p class="video-stats">
-              189M veiws &#183; 3 month ago
-            </p>
-          </div>
-        </div>
-      </div>
-    </a>
-
-    <!-- video 019 -->
-
-    <!--video preview-->
-    <a href="video.html">
-      <div class="video-preview">
-        <!--thumbnail-->
-        <div class="thumbnail-row">
-          <img class="thumbnail" src="imgs/thumbnails/hq721.avif" />
-          <div class="video-time">19:52</div>
-        </div>
-
-        <!--Video Info-->
-        <div class="video-info-grid">
-          <div class="channel-picture">
-            <img class="profile-picture" src="imgs/profiles/unnamed1.jpg" />
-          </div>
-          <div class="video-info">
-            <div class="video-title">
-              <span>INTENSE Over-the-Board Time Scramble vs a Chess.com Opponent!
-                (ChessUp 2)</span>
-              <img src="imgs/Icons/Shorts video/menu-icon.svg">
-            </div>
-            <p class="video-author">Eric Rosen &#x2713;</p>
-            <p class="video-stats">80K views &#183; 3 week ago</p>
-          </div>
-        </div>
-      </div>
-    </a>
-
-    <!-- video 020 -->
-
-    <!--video preview-->
-    <a href="video.html">
-      <div class="video-preview">
-        <!--thumbnail-->
-        <div class="thumbnail-row">
-          <img class="thumbnail" src="imgs/thumbnails/hq729.webp" />
-          <div class="video-time">7:08</div>
-        </div>
-
-        <!--Video Info-->
-        <div class="video-info-grid">
-          <div class="channel-picture">
-            <img class="profile-picture" src="imgs/profiles/channels9_profile.jpg" />
-          </div>
-          <div class="video-info">
-            <div class="video-title">
-              <span>5 Beautiful Movie Songs - Fingerstyle Guitar</span>
-              <img src="imgs/Icons/Shorts video/menu-icon.svg">
-            </div>
-            <p class="video-author">James Bartholomew</p>
-            <p class="video-stats">595k views 4 years ago</p>
-          </div>
-        </div>
-      </div>
-    </a>
-
-    <!-- video 021 -->
-
-    <!--video preview-->
-    <a href="video.html">
-      <div class="video-preview">
-        <!--thumbnail-->
-        <div class="thumbnail-row">
-          <img class="thumbnail" src="imgs/thumbnails/hq725.avif" />
-          <div class="video-time">25:16</div>
-        </div>
-
-        <!--Video Info-->
-        <div class="video-info-grid">
-          <div class="channel-picture">
-            <img class="profile-picture" src="imgs/profiles/unnamed3.jpg" />
-          </div>
-          <div class="video-info">
-            <div class="video-title">
-              <span>But how does bitcoin actually work?</span>
-              <img src="imgs/Icons/Shorts video/menu-icon.svg">
-            </div>
-            <p class="video-author">3Blue1Brown</p>
-            <p class="video-stats">16M views &#183; 7 years ago</p>
-          </div>
-        </div>
-      </div>
-    </a>
-
-    <!-- video 022 -->
-
-    <!--video preview-->
-    <a href="video.html">
-      <div class="video-preview">
-        <!--thumbnail-->
-        <div class="thumbnail-row">
-          <img class="thumbnail" src="imgs/thumbnails/hqdefault.avif" />
-          <div class="video-time">13:01</div>
-        </div>
-
-        <!--Video Info-->
-        <div class="video-info-grid">
-          <div class="channel-picture">
-            <img class="profile-picture" src="imgs/profiles/channels4_profile.jpg" />
-          </div>
-          <div class="video-info">
-            <div class="video-title">
-              <span>RUBIK`S CUBE from LEVEL 1 to LEVEL 100 | Mind Blowing mechanism</span>
-              <img src="imgs/Icons/Shorts video/menu-icon.svg">
-            </div>
-            <p class="video-author">Rubik's &#x2713;</p>
-            <p class="video-stats">9.5M views &#183; 10 month ago</p>
-          </div>
-        </div>
-      </div>
-    </a>
-
-    <!-- video 023 -->
-
-    <!--video preview-->
-    <a href="video.html">
-      <div class="video-preview">
-        <!--thumbnail-->
-        <div class="thumbnail-row">
-          <img class="thumbnail" src="imgs/thumbnails/hq728.webp" />
-          <div class="video-time">2:15:35</div>
-        </div>
-
-        <!--Video Info-->
-        <div class="video-info-grid">
-          <div class="channel-picture">
-            <img class="profile-picture" src="imgs/profiles/channels6_profile.jpg" />
-          </div>
-          <div class="video-info">
-            <div class="video-title">
-              <span>Classical Villain - Classical Music For Villains</span>
-              <img src="imgs/Icons/Shorts video/menu-icon.svg">
-            </div>
-            <p class="video-author">Essential Classics</p>
-            <p class="video-stats">1.5M views &#183; 5 month ago</p>
-          </div>
-        </div>
-      </div>
-    </a>
-
-    <!-- video 024 -->
-
-    <!--video preview-->
-    <a href="video.html">
-      <div class="video-preview">
-        <!--thumbnail-->
-        <div class="thumbnail-row">
-          <img class="thumbnail" src="imgs/thumbnails/hq727.webp" />
-          <div class="video-time">6:17</div>
-        </div>
-
-        <!--Video Info-->
-        <div class="video-info-grid">
-          <div class="channel-picture">
-            <img class="profile-picture" src="imgs/profiles/channels4_profile.jpg" />
-          </div>
-          <div class="video-info">
-            <div class="video-title">
-              <span>scrambled</span>
-              <img src="imgs/Icons/Shorts video/menu-icon.svg">
-            </div>
-            <p class="video-author">Rubik's &#x2713;</p>
-            <p class="video-stats">62M views &#183; 6 years ago</p>
-          </div>
-        </div>
-      </div>
-    </a>
-  </div>
-
-  <script src="scripts/main-page/sidebar.js"></script>
-  <script src="scripts/Header/profile-menu.js"></script>
-
+  <script type="module" src="js/main-page/video-grid.js"></script>
+  <script type="module" src="js/main-page/sidebar.js"></script>
+  <script src="js/Header/profile-menu.js"></script>
+  
 </body>
-
 </html>

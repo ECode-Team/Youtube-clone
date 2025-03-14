@@ -1,0 +1,49 @@
+:root {
+  --Pmain-color: #b2b2b2;
+  --Psecond-color: #7b7b7b;
+}
+
+.dark-mode {
+  --Pmain-color: #5c5c5c;
+  --Psecond-color: #2b2b2b;
+}
+
+@keyframes loadingAnimation {
+  0% { background-color: var(--Pmain-color); }
+  50% { background-color: var(--Psecond-color); }
+  100% { background-color: var(--Pmain-color); }
+}
+.placeholder {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: 297px;
+}
+.PHthumbnail {
+  width: 100%;
+  height: 220px;
+  border-radius: 12px;
+  background-color: gray;
+  animation: loadingAnimation 1.5s infinite ease-in-out;
+}
+.PHinfo {
+  display: flex;
+  align-items: center;
+}
+.PHprofile {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: gray;
+  margin-top: 10px;
+  margin-right: 10px;
+  animation: loadingAnimation 1.5s infinite ease-in-out;
+}
+.PHtitle {
+  width: 260px;
+  height: 30px;
+  border-radius: 20px;
+  background-color: gray;
+  animation: loadingAnimation 1.5s infinite ease-in-out;
+}
+/* placeholder */

@@ -13,7 +13,7 @@ class CommentAdmin(admin.TabularInline):
   extra = 1
 
 @admin.register(VIDEO_SHORT)
-class VideoAdmin(admin.ModelAdmin):
+class VideoShortAdmin(admin.ModelAdmin):
   list_display = ["title","thumbnail","uploaded_by"]
 
 

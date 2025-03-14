@@ -64,6 +64,7 @@ class VIDEO(models.Model):
     description = models.TextField(blank=True, null=True)
     views = models.PositiveIntegerField(default=0)
     count_like = models.PositiveIntegerField(default=0)
+    uploaded_by = models.ForeignKey(Channel, on_delete=models.CASCADE, related_name="channel_videos")
     uploaded_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
@@ -97,12 +98,12 @@ class VIDEO_SHORT(models.Model):
 
     class Meta:
         verbose_name = "ویدئو"
-        verbose_name_plural = " ویدئوهای کوتاه"  
+        verbose_name_plural = " ویدئوهای کوتاه"
         ordering = ['-uploaded_at']
 
     def __str__(self):
         return self.title
-    
+
 class Comment(models.Model):
     video = models.ForeignKey(VIDEO, on_delete=models.CASCADE, related_name='comments')
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
