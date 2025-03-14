@@ -8,7 +8,6 @@
 
   <!-- Css Links -->
   <link rel="stylesheet" href="styles/header/navbar.css" />
-  <link rel="stylesheet" href="styles/general.css" />
   <link rel="stylesheet" href="styles/header/profile-menu.css" />
   <link rel="stylesheet" href="styles/playback page/PB-topic-bar.css" />
   <link rel="stylesheet" href="styles/playback page/PB-comments-header.css" />
@@ -23,6 +22,7 @@
   <link rel="stylesheet" href="styles/sidebar/more-form.css">
   <link rel="stylesheet" href="styles/sidebar/sidebar.css" />
   <link rel="stylesheet" href="styles/playback page/PB-share.css" />
+  <link rel="stylesheet" href="styles/general.css" />
 
   <!--Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -421,17 +421,21 @@
              <!-- box -->
             <div class="box-share">
               <div class="index-container">
-                <div>
-                  <div class="title-share"><p>Share</p></div>
+                <button class="slider-rigth-icon"><img src="imgs/Icons/Header/Scroll-right.svg"></button>
+                <button class="closed-icon"><img src="imgs/Icons/playback page/closed.svg" alt=""></button>
+                <div class="">
+                  <div class="title-share"><label>Share</label></div>
                 </div>
+                <br>
                 <div class="options-share">
-                  <div class="option"><div></div><p>...</p></div>
-                  <div class="option"><div></div><p>...</p></div>
-                  <div class="option"><div></div><p>...</p></div>
-                  <div class="option"><div></div><p>...</p></div>
-                  <div class="option"><div></div><p>...</p></div>
-                  <div class="option"><div></div><p>...</p></div>
+                  <div class="option"><div><img src="imgs/Icons/playback page/share-profil/embed.svg" alt=""></div><p>Embed</p></div>
+                  <div class="option"><div><img src="imgs/Icons/playback page/share-profil/goo.svg" alt=""></div><p>goo</p></div>
+                  <div class="option"><div><img src="imgs/Icons/playback page/share-profil/whatsApp.svg" alt=""></div><p>WhatsApp</p></div>
+                  <div class="option"><div><img src="imgs/Icons/playback page/share-profil/facebook.svg" alt=""></div><p>Facebook</p></div>
+                  <div class="option"><div><img src="imgs/Icons/playback page/share-profil/x.svg" alt=""></div><p>X</p></div>
+                  <div class="option"><div><img src="imgs/Icons/playback page/share-profil/email.svg" alt=""></div><p>Email</p></div>
                 </div>
+                <br>
                 <div class="index-address">
                   <div class="index-url">
                     <p>https://</p>
@@ -439,7 +443,11 @@
                   </div>
                 </div>
                 <hr>
-
+                <br>
+                 <div class="box-time">
+                  <input type="checkbox" class="checkbox">
+                  <span>Start at  19:00</span>
+                 </div>
               </div>
             </div>
            </div>
@@ -687,10 +695,7 @@
 
       <!-- topic bar -->
       <div class="topic-bar-container">
-        <button class="scroll-button left"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24"
-            width="24" focusable="false" aria-hidden="true" style="display: inherit; width: 24px; height: 24px;">
-            <path d="M14.96 18.96 8 12l6.96-6.96.71.71L9.41 12l6.25 6.25-.7.71z"></path>
-          </svg></button>
+        <button class="scroll-button left"><img src="imgs/Icons/Header/Scroll-left.svg"></button>
         <div class="topic-bar">
           <button class="topic" tabindex="0">All</button>
           <button class="topic" tabindex="0">Movies</button>
@@ -706,10 +711,7 @@
           <button class="topic" tabindex="0">Movies</button>
           <button class="topic" tabindex="0">News</button>
         </div>
-        <button class="scroll-button right"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24"
-            width="24" focusable="false" aria-hidden="true" style="display: inherit; width: 24px; height: 24px;">
-            <path d="m9.4 18.4-.7-.7 5.6-5.6-5.7-5.7.7-.7 6.4 6.4-6.3 6.3z"></path>
-          </svg></button>
+        <button class="scroll-button right"><img src="imgs/Icons/Header/Scroll-right.svg"></button>
       </div>
 
       <!-- <!-- Recommended video list -->
